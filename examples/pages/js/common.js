@@ -69,6 +69,11 @@ var Nav = {
         value: "Home",
         icon: "home",
         url: "plugins.html"
+    },{
+        text: "GitHub",
+        value: "GitHub",
+        icon: "social-github",
+        url: "https://github.com/igonglei/clean-ui"
     }],
     tpl: '<li class="{cls}"><a href="{url}"><div class="icon"><i class="icon-{icon}"></i></div><div class="text">{text}</div></a></li>',
     init: function() {
