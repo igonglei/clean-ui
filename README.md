@@ -1,4 +1,14 @@
-### [个人封装插件](https://igonglei.github.io/clean-ui/examples/pages/plugins.html)
+## 预览
+
+### [在线预览](https://igonglei.github.io/clean-ui/)
+
+### 预览图
+<p>
+  <a href="https://igonglei.github.io/clean-ui/" target="_blank">
+    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/preview/plugins.png">
+    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/preview/map.png">
+  </a>
+</p>
 
 ### 1、loader.js
 >CSS3加载动画插件，支持多种动画，用法简单，美观实用，支持ie10~ie11和chrome
