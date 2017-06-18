@@ -3,35 +3,35 @@
         "vertex": {
             "cab-down": {
                 "shape": "image",
-                "image": "/static/images/lab/cab-down.png"
+                "image": "/clean-ui/static/images/lab/cab-down.png"
             },
             "power-down": {
                 "shape": "image",
-                "image": "/static/images/lab/power-down.png"
+                "image": "/clean-ui/static/images/lab/power-down.png"
             },
             "toggle-down": {
                 "shape": "image",
-                "image": "/static/images/lab/toggle-down.png"
+                "image": "/clean-ui/static/images/lab/toggle-down.png"
             },
             "net-down": {
                 "shape": "image",
-                "image": "/static/images/lab/net-down.png"
+                "image": "/clean-ui/static/images/lab/net-down.png"
             },
             "line-down": {
                 "shape": "image",
-                "image": "/static/images/lab/line-down.png"
+                "image": "/clean-ui/static/images/lab/line-down.png"
             },
             "air-left": {
                 "shape": "image",
-                "image": "/static/images/lab/air-left.png"
+                "image": "/clean-ui/static/images/lab/air-left.png"
             },
             "air-mini": {
                 "shape": "image",
-                "image": "/static/images/lab/air-mini.png"
+                "image": "/clean-ui/static/images/lab/air-mini.png"
             },
             "wall": {
                 "shape": "image",
-                "image": "/static/images/lab/wall.png"
+                "image": "/clean-ui/static/images/lab/wall.png"
             }
         }
     },

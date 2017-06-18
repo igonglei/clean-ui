@@ -18,7 +18,7 @@ var Lab = {
     init: function() {
         var $el = $(this.el),
             self = this,
-            root = "/static/";
+            root = "/clean-ui/static/";
         $el.labDesigner({
             backgroundImage: root + "images/lab/lab-layout.png",
             url: root + "data/lab.min.json",
