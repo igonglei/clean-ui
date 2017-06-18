@@ -1,0 +1,39 @@
+@import url('../../../less/common.less');
+.plugins {
+    .pl(@base-padding);
+    &>div {
+        .h(200px);
+        .pb(@base-padding);
+        .pl;
+        >.card {
+            .size;
+            .bgc(#2a7294);
+            .bra(4px);
+            .p(@base-padding);
+            >div {
+                .center;
+            }
+            >.pbar1,
+            >.pbar2 {
+                .h(20px);
+                .mt(67px);
+            }
+            >.divbar {
+                .size(100px);
+            }
+            &.darkBg {
+                .bgc(#001245);
+            }
+            >.cspie,
+            >.csline {
+                .size(50%);
+            }
+        }
+        &.grid {
+            .h(325px);
+            table {
+                .size;
+            }
+        }
+    }
+}

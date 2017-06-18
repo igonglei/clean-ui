@@ -1,0 +1,59 @@
+@import url('../../../less/common.less');
+.lab-content {
+    .size;
+    .bgc(#001245);
+    background-image: radial-gradient(circle farthest-side, #0074a5 20%, #026392 40%, #001245 100%);
+    .bra(4px);
+}
+
+.lab {
+    .size(956px);
+    .m(0 auto);
+}
+
+.cabTooltip {
+    @pd: @base-padding - 5;
+    .p(@pd);
+    .fs(@base-font-size);
+    >.title {
+        .cl;
+        >a {
+            .fr;
+        }
+    }
+    >.rate {
+        .p(@pd 0);
+    }
+    .u {
+        .show(true);
+        .pl(@pd*3);
+    }
+    .bar {
+        .show(true);
+        .size(100px,
+        20px);
+        .va;
+        .bgc(#002157);
+        .mr(@pd);
+        >.success {
+            .bgc(#40ed73);
+            .h;
+        }
+    }
+    >.devices {
+        .w;
+        >thead {
+            .bgc(#002157);
+        }
+        th,
+        td {
+            .p(5px);
+        }
+        .name {
+            .cl;
+        }
+        tbody>tr:hover {
+            .bgc(#002157);
+        }
+    }
+}

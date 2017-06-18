@@ -1,0 +1,26 @@
+@import url('../../../less/common.less');
+.screenshots {
+    .pl(@base-padding);
+    &>div {
+        .h(150px);
+        .pb(@base-padding);
+        .pl;
+        >img {
+            .show;
+            .size;
+            .transition(@base-transition);
+            .bsd(0 0 5px 2px rgba(0, 0, 0, .1));
+            .bra(4px);
+            &:hover {
+                .transform(translate3d(0, 0, 0) scale(1.1));
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .modal-dialog {
+        .w(auto);
+        .m(@base-padding*2);
+    }
+}
