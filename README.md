@@ -1,3 +1,7 @@
+# Clean UI
+
+> 基于jQuery&CSS3的插件库
+
 ## 预览
 
 ### [在线预览](https://igonglei.github.io/clean-ui/)
@@ -16,9 +20,9 @@
 ##### 引入
 
 ```html
-<script src="examples/third/jquery/jquery.min.js"></script>
-<link rel="stylesheet" href="plugins/loader/loader.min.css">
-<script src="plugins/loader/loader.min.js"></script>
+<script src="/third/jquery/jquery.min.js"></script>
+<link rel="stylesheet" href="/plugins/loader/loader.min.css">
+<script src="/plugins/loader/loader.min.js"></script>
 ```
 
 ##### html
@@ -66,8 +70,8 @@ $("#content").hideLoader();
 ##### 引入
 
 ```html
-<script src="examples/third/jquery/jquery.min.js"></script>
-<script src="plugins/pbar/pbar.min.js"></script>
+<script src="/third/jquery/jquery.min.js"></script>
+<script src="/plugins/pbar/pbar.min.js"></script>
 ```
 
 ##### html
@@ -196,9 +200,9 @@ $("#bar").pbar({
 ##### 引入
 
 ```html
-<script src="examples/third/jquery/jquery.min.js"></script>
-<link rel="stylesheet" href="plugins/csgrid/csgrid.min.css">
-<script src="plugins/csgrid/csgrid.min.js"></script>
+<script src="/third/jquery/jquery.min.js"></script>
+<link rel="stylesheet" href="/plugins/csgrid/csgrid.min.css">
+<script src="/plugins/csgrid/csgrid.min.js"></script>
 ```
 
 ##### html
@@ -441,12 +445,12 @@ $("#grid").csgrid({
 
 ```html
 <script>
-    mxBasePath = 'examples/third/mxgraph';
+    mxBasePath = '/third/mxgraph';
 </script>
-<script src="examples/third/jquery/jquery.min.js"></script>
-<script src="examples/third/mxgraph/js/mxClient.min.js"></script>
-<link rel="stylesheet" href="plugins/labDesigner/labDesigner.min.css">
-<script src="plugins/labDesigner/labDesigner.min.js"></script>
+<script src="/third/jquery/jquery.min.js"></script>
+<script src="/third/mxgraph/js/mxClient.min.js"></script>
+<link rel="stylesheet" href="/plugins/labDesigner/labDesigner.min.css">
+<script src="/plugins/labDesigner/labDesigner.min.js"></script>
 ```
 
 ##### html
@@ -566,8 +570,8 @@ $("#lab").labDesigner({
 ##### 引入
 
 ```html
-<script src="examples/third/jquery/jquery.min.js"></script>
-<script src="plugins/divbar/divbar.min.js"></script>
+<script src="/third/jquery/jquery.min.js"></script>
+<script src="/plugins/divbar/divbar.min.js"></script>
 ```
 
 ##### html
@@ -639,8 +643,8 @@ $("#bar").divbar({
 ##### 引入
 
 ```html
-<script src="examples/third/jquery/jquery.min.js"></script>
-<script src="plugins/extproto/extproto.min.js"></script>
+<script src="/third/jquery/jquery.min.js"></script>
+<script src="/plugins/extproto/extproto.min.js"></script>
 ```
 ##### 方法
 
@@ -743,9 +747,9 @@ $("#bar").divbar({
 ##### 引入
 
 ```html
-<script src="examples/third/jquery/jquery.min.js"></script>
-<script src="examples/third/echarts/echarts.min.js"></script>
-<script src="plugins/csechart/csechart.min.js"></script>
+<script src="/third/jquery/jquery.min.js"></script>
+<script src="/third/echarts/echarts.min.js"></script>
+<script src="/plugins/csechart/csechart.min.js"></script>
 ```
 
 ##### html
