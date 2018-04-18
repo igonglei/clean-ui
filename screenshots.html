@@ -41,44 +41,7 @@
                 </div>
                 <div class="col-xs-10">
                     <div class="box content-box">
-                        <div class="row screenshots">
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/owl-room.png" alt="武研运维实验室空间">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/sde-kanban-home.png" alt="SDE运维看板首页">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/sde-kanban-warn.png" alt="SDE运维看板告警">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/sde-kanban-order.png" alt="SDE运维看板服务响应">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/sde-kanban-sdn.png" alt="SDE运维看板SDN">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/sde-kanban-topo.png" alt="SDE运维看板TOPO">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/sde-home.png" alt="SDE运维首页">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/sde-warn.png" alt="SDE运维告警">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/envmall-search.png" alt="环境商城搜索">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/envmall-book.png" alt="环境商城预定">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/envmall-network.png" alt="环境商城组网">
-                            </div>
-                            <div class="col-xs-3">
-                                <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/supertool-logview.png" alt="日志查看">
-                            </div>
-                        </div>
+                        <div class="row screenshots"></div>
                     </div>
                 </div>
             </div>
@@ -89,10 +52,16 @@
             </a>
         </div>
     </div>
-    <div class="modal fade" id="scModal" tabindex="-1" role="dialog">
+    <div class="modal fade" id="scModal" tabindex="-1" role="dialog" aria-labelledby="scModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <img id="scImg" src="/clean-ui/static/images/logo.png" class="img-responsive" alt="原图">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="scModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <img id="scImg" src="/static/images/logo.png" class="img-responsive" title="原图">
+                </div>
             </div>
         </div>
     </div>
