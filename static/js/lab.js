@@ -20,7 +20,7 @@ var Lab = {
             self = this,
             root = "/clean-ui/static/";
         $el.labDesigner({
-            backgroundImage: root + "images/lab/lab-layout.png",
+            backgroundImage: root + "images/lab/lab-layout.jpg",
             url: root + "data/lab.min.json",
             tooltip: function(cell) {
                 if (!/^cab/i.test(cell.style) || !cell.value) {
