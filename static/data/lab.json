@@ -5,6 +5,18 @@
                 "shape": "image",
                 "image": "/clean-ui/static/images/lab/cab-down.png"
             },
+            "cab-down-low": {
+                "shape": "image",
+                "image": "/clean-ui/static/images/lab/cab-down-low.png"
+            },
+            "cab-down-middle": {
+                "shape": "image",
+                "image": "/clean-ui/static/images/lab/cab-down-middle.png"
+            },
+            "cab-down-high": {
+                "shape": "image",
+                "image": "/clean-ui/static/images/lab/cab-down-high.png"
+            },
             "power-down": {
                 "shape": "image",
                 "image": "/clean-ui/static/images/lab/power-down.png"
@@ -36,11 +48,11 @@
         }
     },
     "vertex": [{
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 115,
-        "style": "cab-down",
+        "width": 16,
+        "height": 30,
+        "x": 350,
+        "y": 150,
+        "style": "cab-down-high",
         "value": {
             "name": "A1",
             "use_u": 80,
@@ -56,11 +68,11 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 230,
-        "y": 115,
-        "style": "cab-down",
+        "width": 16,
+        "height": 30,
+        "x": 365,
+        "y": 150,
+        "style": "cab-down-middle",
         "value": {
             "name": "A2",
             "use_u": 60,
@@ -74,11 +86,11 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 250,
-        "y": 115,
-        "style": "cab-down",
+        "width": 16,
+        "height": 30,
+        "x": 380,
+        "y": 150,
+        "style": "cab-down-high",
         "value": {
             "name": "A3",
             "use_u": 80,
@@ -105,11 +117,11 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 270,
-        "y": 115,
-        "style": "cab-down",
+        "width": 16,
+        "height": 30,
+        "x": 395,
+        "y": 150,
+        "style": "cab-down-high",
         "value": {
             "name": "A4",
             "use_u": 70,
@@ -129,14 +141,14 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 290,
-        "y": 115,
-        "style": "cab-down",
+        "width": 16,
+        "height": 30,
+        "x": 410,
+        "y": 150,
+        "style": "cab-down-low",
         "value": {
             "name": "A5",
-            "use_u": 40,
+            "use_u": 30,
             "total_u": 80,
             "devices": [{
                 "type": "OSN3500"
@@ -145,10 +157,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 310,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 426,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A6",
@@ -161,10 +173,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 330,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 442,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A7",
@@ -181,10 +193,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 350,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 458,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A8",
@@ -201,10 +213,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 370,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 474,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A9",
@@ -217,10 +229,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 390,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 490,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A10",
@@ -249,10 +261,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 410,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 506,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A11",
@@ -281,10 +293,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 430,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 522,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A12",
@@ -305,10 +317,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 450,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 538,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A13",
@@ -333,10 +345,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 470,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 554,
+        "y": 150,
         "style": "cab-down",
         "value": {
             "name": "A14",
@@ -361,22 +373,22 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 490,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 570,
+        "y": 150,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 510,
-        "y": 115,
+        "width": 16,
+        "height": 30,
+        "x": 586,
+        "y": 150,
         "style": "toggle-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 180,
+        "width": 16,
+        "height": 30,
+        "x": 330,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B1",
@@ -397,10 +409,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 230,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B2",
@@ -421,10 +433,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 250,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B3",
@@ -457,10 +469,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 270,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B4",
@@ -493,10 +505,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 290,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B5",
@@ -521,10 +533,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 310,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B6",
@@ -549,10 +561,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 330,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B7",
@@ -573,10 +585,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 350,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B8",
@@ -597,10 +609,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 370,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B9",
@@ -629,10 +641,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 390,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B10",
@@ -655,10 +667,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 410,
-        "y": 180,
+        "y": 210,
         "style": "cab-down",
         "value": {
             "name": "B11",
@@ -675,40 +687,40 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 430,
-        "y": 180,
+        "y": 210,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 450,
-        "y": 180,
+        "y": 210,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 470,
-        "y": 180,
+        "y": 210,
         "style": "toggle-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 490,
-        "y": 180,
+        "y": 210,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 510,
-        "y": 180,
+        "y": 210,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 245,
+        "width": 16,
+        "height": 30,
+        "x": 330,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C1",
@@ -716,10 +728,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 230,
-        "y": 245,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C2",
@@ -727,10 +739,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 250,
-        "y": 245,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C3",
@@ -738,10 +750,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 270,
-        "y": 245,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C4",
@@ -749,10 +761,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 290,
-        "y": 245,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C5",
@@ -760,10 +772,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 310,
-        "y": 245,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C6",
@@ -771,10 +783,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 330,
-        "y": 245,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C7",
@@ -782,10 +794,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 350,
-        "y": 245,
+        "y": 265,
         "style": "cab-down",
         "value": {
             "name": "C8",
@@ -793,52 +805,52 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 370,
-        "y": 245,
+        "y": 265,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 390,
-        "y": 245,
+        "y": 265,
         "style": "toggle-down"
     }, {
         "width": 38,
-        "height": 37,
+        "height": 30,
         "x": 410,
-        "y": 245,
+        "y": 265,
         "style": "wall"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 450,
-        "y": 245,
+        "y": 265,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 470,
-        "y": 245,
+        "y": 265,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 490,
-        "y": 245,
+        "y": 265,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 510,
-        "y": 245,
+        "y": 265,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 310,
+        "width": 16,
+        "height": 30,
+        "x": 330,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D1",
@@ -846,10 +858,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 230,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D2",
@@ -857,10 +869,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 250,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D3",
@@ -868,10 +880,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 270,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D4",
@@ -879,10 +891,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 290,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D5",
@@ -890,10 +902,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 310,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D6",
@@ -901,10 +913,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 330,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D7",
@@ -912,10 +924,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 350,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D8",
@@ -923,10 +935,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 370,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D9",
@@ -934,10 +946,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 390,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D10",
@@ -945,10 +957,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 410,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D11",
@@ -956,10 +968,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 430,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D12",
@@ -967,10 +979,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 450,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D13",
@@ -978,10 +990,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 470,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D14",
@@ -989,10 +1001,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 490,
-        "y": 310,
+        "y": 320,
         "style": "cab-down",
         "value": {
             "name": "D15",
@@ -1000,40 +1012,40 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 510,
-        "y": 310,
+        "y": 320,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 530,
-        "y": 310,
+        "y": 320,
         "style": "toggle-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 550,
-        "y": 310,
+        "y": 320,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 570,
-        "y": 310,
+        "y": 320,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 590,
-        "y": 310,
+        "y": 320,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 375,
+        "width": 16,
+        "height": 30,
+        "x": 330,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E1",
@@ -1041,10 +1053,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 230,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E2",
@@ -1052,10 +1064,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 250,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E3",
@@ -1063,10 +1075,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 270,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E4",
@@ -1074,10 +1086,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 290,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E5",
@@ -1085,10 +1097,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 310,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E6",
@@ -1096,10 +1108,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 330,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E7",
@@ -1107,10 +1119,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 350,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E8",
@@ -1118,10 +1130,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 370,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E9",
@@ -1129,10 +1141,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 390,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E10",
@@ -1140,10 +1152,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 410,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E11",
@@ -1151,10 +1163,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 430,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E12",
@@ -1162,10 +1174,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 450,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E13",
@@ -1173,10 +1185,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 470,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E14",
@@ -1184,10 +1196,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 490,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E15",
@@ -1195,10 +1207,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 510,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E16",
@@ -1206,10 +1218,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 530,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E17",
@@ -1217,10 +1229,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 550,
-        "y": 375,
+        "y": 380,
         "style": "cab-down",
         "value": {
             "name": "E18",
@@ -1228,22 +1240,22 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 570,
-        "y": 375,
+        "y": 380,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 590,
-        "y": 375,
+        "y": 380,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 440,
+        "width": 16,
+        "height": 30,
+        "x": 330,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F1",
@@ -1251,10 +1263,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 230,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F2",
@@ -1262,10 +1274,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 250,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F3",
@@ -1273,10 +1285,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 270,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F4",
@@ -1284,10 +1296,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 290,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F5",
@@ -1295,10 +1307,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 310,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F6",
@@ -1306,10 +1318,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 330,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F7",
@@ -1317,10 +1329,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 350,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F8",
@@ -1328,10 +1340,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 370,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F9",
@@ -1339,10 +1351,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 390,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F10",
@@ -1350,10 +1362,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 410,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F11",
@@ -1361,10 +1373,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 430,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F12",
@@ -1372,10 +1384,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 450,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F13",
@@ -1383,10 +1395,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 470,
-        "y": 440,
+        "y": 435,
         "style": "cab-down",
         "value": {
             "name": "F14",
@@ -1394,46 +1406,46 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 490,
-        "y": 440,
+        "y": 435,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 510,
-        "y": 440,
+        "y": 435,
         "style": "toggle-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 530,
-        "y": 440,
+        "y": 435,
         "style": "toggle-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 550,
-        "y": 440,
+        "y": 435,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 570,
-        "y": 440,
+        "y": 435,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 590,
-        "y": 440,
+        "y": 435,
         "style": "power-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 505,
+        "width": 16,
+        "height": 30,
+        "x": 330,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G1",
@@ -1441,10 +1453,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 230,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G2",
@@ -1452,10 +1464,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 250,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G3",
@@ -1463,10 +1475,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 270,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G4",
@@ -1474,10 +1486,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 290,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G5",
@@ -1485,10 +1497,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 310,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G6",
@@ -1496,10 +1508,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 330,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G7",
@@ -1507,10 +1519,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 350,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G8",
@@ -1518,10 +1530,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 370,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G9",
@@ -1529,10 +1541,10 @@
             "total_u": 80
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 390,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G10",
@@ -1553,10 +1565,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 410,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G11",
@@ -1589,10 +1601,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 430,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G12",
@@ -1619,10 +1631,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 450,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G13",
@@ -1651,10 +1663,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 470,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G14",
@@ -1681,10 +1693,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 490,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G15",
@@ -1709,10 +1721,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 510,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G16",
@@ -1737,10 +1749,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 530,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G17",
@@ -1765,10 +1777,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 550,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G18",
@@ -1785,10 +1797,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 570,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G19",
@@ -1809,10 +1821,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 590,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G20",
@@ -1839,10 +1851,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 610,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G21",
@@ -1865,10 +1877,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 630,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G22",
@@ -1885,10 +1897,10 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 650,
-        "y": 505,
+        "y": 490,
         "style": "cab-down",
         "value": {
             "name": "G23",
@@ -1905,178 +1917,178 @@
             }]
         }
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 670,
-        "y": 505,
+        "y": 490,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 690,
-        "y": 505,
+        "y": 490,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 710,
-        "y": 505,
+        "y": 490,
         "style": "toggle-down"
     }, {
-        "width": 20,
-        "height": 37,
-        "x": 210,
-        "y": 570,
-        "style": "cab-down"
-    }, {
-        "width": 20,
-        "height": 37,
-        "x": 230,
-        "y": 570,
-        "style": "cab-down"
-    }, {
-        "width": 20,
-        "height": 37,
-        "x": 250,
-        "y": 570,
-        "style": "cab-down"
-    }, {
-        "width": 20,
-        "height": 37,
-        "x": 270,
-        "y": 570,
-        "style": "cab-down"
-    }, {
-        "width": 20,
-        "height": 37,
-        "x": 290,
-        "y": 570,
-        "style": "cab-down"
-    }, {
-        "width": 20,
-        "height": 37,
-        "x": 310,
-        "y": 570,
-        "style": "cab-down"
-    }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 330,
-        "y": 570,
+        "y": 550,
+        "style": "cab-down"
+    }, {
+        "width": 16,
+        "height": 30,
+        "x": 230,
+        "y": 550,
+        "style": "cab-down"
+    }, {
+        "width": 16,
+        "height": 30,
+        "x": 250,
+        "y": 550,
+        "style": "cab-down"
+    }, {
+        "width": 16,
+        "height": 30,
+        "x": 270,
+        "y": 550,
+        "style": "cab-down"
+    }, {
+        "width": 16,
+        "height": 30,
+        "x": 290,
+        "y": 550,
+        "style": "cab-down"
+    }, {
+        "width": 16,
+        "height": 30,
+        "x": 310,
+        "y": 550,
+        "style": "cab-down"
+    }, {
+        "width": 16,
+        "height": 30,
+        "x": 330,
+        "y": 550,
         "style": "line-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 350,
-        "y": 570,
+        "y": 550,
         "style": "line-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 370,
-        "y": 570,
+        "y": 550,
         "style": "line-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 390,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 410,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 430,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 450,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 470,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 490,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 510,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 530,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 550,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 570,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 590,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 610,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 630,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 650,
-        "y": 570,
+        "y": 550,
         "style": "cab-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 670,
-        "y": 570,
+        "y": 550,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 690,
-        "y": 570,
+        "y": 550,
         "style": "net-down"
     }, {
-        "width": 20,
-        "height": 37,
+        "width": 16,
+        "height": 30,
         "x": 710,
-        "y": 570,
+        "y": 550,
         "style": "toggle-down"
     }, {
         "width": 30,
@@ -2088,7 +2100,7 @@
         "width": 30,
         "height": 55,
         "x": 620,
-        "y": 430,
+        "y": 435,
         "style": "air-left"
     }, {
         "width": 30,

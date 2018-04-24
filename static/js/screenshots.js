@@ -18,6 +18,7 @@ var Screenshots = {
         { title: "SuperLAB首页", img: "homepage.png" },
         { title: "武研运维实验室基础设施", img: "owl-inf.png" },
         { title: "武研运维实验室利用率管理", img: "owl-uti.png" },
+        { title: "武研运维实验室设计器", img: "owl-designer.png" },
         { title: "SDE运维看板首页", img: "sde-kanban-home.png" },
         { title: "SDE运维看板告警", img: "sde-kanban-warn.png" },
         { title: "SDE运维看板服务响应", img: "sde-kanban-order.png" },
@@ -25,9 +26,10 @@ var Screenshots = {
         { title: "SDE运维看板TOPO", img: "sde-kanban-topo.png" },
         { title: "SDE运维首页", img: "sde-home.png" },
         { title: "SDE运维告警", img: "sde-warn.png" },
-        { title: "环境商城搜索", img: "envmall-search.png" },
-        { title: "环境商城预定", img: "envmall-book.png" },
-        { title: "环境商城组网", img: "envmall-network.png" },
+        { title: "环境商城环境搜索", img: "envmall-search.png" },
+        { title: "环境商城环境详情", img: "envmall-envinfo.png" },
+        { title: "环境商城环境预定", img: "envmall-book.png" },
+        { title: "环境商城自组网", img: "envmall-network.png" },
         { title: "日志查看", img: "supertool-logview.png" }
     ],
     init: function() {

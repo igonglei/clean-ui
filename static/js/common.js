@@ -103,10 +103,15 @@ var Menu = {
         text: "作品",
         icon: "layers",
         children: [{
+            text: "作品截图",
+            value: "screenshots",
+            icon: "picture",
+            url: "index.html"
+        }, {
             text: "插件实例",
             value: "plugins",
             icon: "cursor",
-            url: "index.html"
+            url: "plugins.html"
         }, {
             text: "实验室",
             value: "lab",
@@ -117,11 +122,6 @@ var Menu = {
             value: "map",
             icon: "map",
             url: "map.html"
-        }, {
-            text: "作品截图",
-            value: "screenshots",
-            icon: "picture",
-            url: "screenshots.html"
         }]
     }],
     tpl: {
