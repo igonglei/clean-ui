@@ -1,7 +1,7 @@
-﻿//常量
+//常量
 var ERRCODE_SUCCESS = "0x0000",
     PAGEHEIGHT = 900,
-    NAVNAME, MENUNAME, LOADER = {
+    NAVNAME = "Home", MENUNAME = "screenshots", LOADER = {
         color: '#00aaff',
         backgroundColor: 'rgba(238,238,238,0.3)'
     };
@@ -48,14 +48,14 @@ var Page = {
     scrollTop: function() {
         var $top = $(this.elTop);
         $(window).scroll(function() {
-            if ($(window).scrollTop() > 100) {
+            if ($(window).scrollTop() > 0) {
                 $top.show();
             } else {
                 $top.hide();
             }
         });
         $top.click(function() {
-            $(window).scrollTop(0);
+            $("html,body").animate({ scrollTop: 0 }, 300);
         });
     }
 };
@@ -113,12 +113,12 @@ var Menu = {
             icon: "cursor",
             url: "plugins.html"
         }, {
-            text: "实验室",
+            text: "空间布局",
             value: "lab",
             icon: "drawer",
             url: "lab.html"
         }, {
-            text: "地图",
+            text: "实验室分布",
             value: "map",
             icon: "map",
             url: "map.html"
