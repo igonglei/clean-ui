@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>实验室</title>
+    <title>空间布局</title>
     <link href="/clean-ui/static/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="/clean-ui/static/third/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="/clean-ui/static/third/simple-line-icons/css/simple-line-icons.min.css" rel="stylesheet" />
     <link href="/clean-ui/static/css/base.css" rel="stylesheet" />
-    <link href="/clean-ui/static/css/lab.css" rel="stylesheet" />
+    <link href="/clean-ui/static/plugins/labDesigner/css/labDesigner.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -41,9 +41,7 @@
                 </div>
                 <div class="col-xs-10">
                     <div class="box content-box">
-                        <div class="lab-content">
-                            <div id="lab" class="lab"></div>
-                        </div>
+                        <div id="lab" class="lab"></div>
                     </div>
                 </div>
             </div>
@@ -55,16 +53,16 @@
         </div>
     </div>
     <script>
-    mxBasePath = '/clean-ui/static/third/mxgraph';
+    mxBasePath = "/clean-ui/static/third/mxgraph";
     </script>
     <link href="/clean-ui/static/css/mxgraph.css" rel="stylesheet" />
     <script src="/clean-ui/static/third/jquery/jquery.min.js"></script>
     <script src="/clean-ui/static/third/mxgraph/js/mxClient.min.js"></script>
     <script src="/clean-ui/static/third/bootstrap/js/bootstrap.min.js"></script>
     <script src="/clean-ui/static/plugins/extproto/extproto.min.js"></script>
-    <script src="/clean-ui/static/plugins/labDesigner/labDesigner.min.js"></script>
-    <script src="/clean-ui/static/js/common.min.js"></script>
-    <script src="/clean-ui/static/js/lab.min.js"></script>
+    <script src="/clean-ui/static/plugins/labDesigner/js/labDesigner.js"></script>
+    <script src="/clean-ui/static/js/common.js"></script>
+    <script src="/clean-ui/static/js/lab.js"></script>
 </body>
 
 </html>

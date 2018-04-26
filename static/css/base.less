@@ -1,4 +1,4 @@
-@import url('Shared/common.less');
+@import url('../less/common.less');
 
 html, body {
     .fm;
@@ -100,9 +100,9 @@ a {
 }
 
 .gradient {
-    @sc: #2a7294;
-    @ec: #42a1ce;
-    background-image: linear-gradient(to right,@sc,@ec,@sc); /*W3C standard*/
+    @sc: #307fa5;
+    @ec: #5dbeec;
+    background-image: linear-gradient(to right,@sc,@ec 60%,@sc); /*W3C standard*/
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@sc, endColorstr=@ec, GradientType='1'); /*IE*/
 }
 
@@ -136,7 +136,7 @@ a {
 }
 
 .user-name {
-    .fs(@larger-font-size);
+    .fs(@large-font-size);
     .p(0 10px);
 }
 
@@ -219,7 +219,7 @@ a {
         }
 
         >i {
-            .p(0 5px);
+            .p(0 10px);
         }
     }
 }
@@ -250,7 +250,13 @@ a {
             text-decoration: none;
 
             >i {
-                .p(0 5px);
+                .p(0 10px);
+            }
+
+            >.name {
+                .show(true);
+                .w(70px);
+                .tl;
             }
         }
     }
@@ -266,7 +272,7 @@ a {
 .box {
     .bgc(fade(#fff,20%));
     .bra(4px);
-    .bsd(inset 0 0 200px 20px rgba(255, 255, 255, 0.1));
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 
 .content-box {
@@ -297,7 +303,7 @@ a {
 
 .fixedBar {
     .pof;
-    .pos-tr(750px,15px);
+    .pos-tr(900px,15px);
     .zi(500);
 
     >a {
