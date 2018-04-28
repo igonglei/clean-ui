@@ -6,6 +6,22 @@ var ERRCODE_SUCCESS = "0x0000",
         backgroundColor: 'rgba(238,238,238,0.3)'
     };
 
+//格式化模板
+String.prototype.template = function(data) {
+    var tpl = this;
+    if (!tpl || !data) {
+        return tpl;
+    }
+    var reg = /{(.*?)}/g, match = tpl.match(reg);
+    $.each(match, function(i, v) {
+        var key = v.replace(reg, "$1"), value = data[key];
+        if (value !== undefined) {
+            tpl = tpl.replace(v, value);
+        }
+    });
+    return tpl;
+};
+
 //页面初始化
 $(function() {
     Page.init();
@@ -117,6 +133,11 @@ var Menu = {
             value: "lab",
             icon: "drawer",
             url: "lab.html"
+        }, {
+            text: "环境设计器",
+            value: "editor",
+            icon: "map",
+            url: "editor.html"
         }, {
             text: "实验室分布",
             value: "map",
