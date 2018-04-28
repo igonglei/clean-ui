@@ -7,7 +7,9 @@ $.fn.showLoader.defaults = {
     backgroundColor: "rgba(255,255,255,0.6)"
 };
 
-var imgPath = "/static/plugins/envEditor/images/";
+var plugPath = "/static/plugins/envEditor/", 
+    imgPath = plugPath + "images/",
+    dataPath = plugPath + "data/";
 
 //环境编辑器测试
 var EnvEditor = new function () {
@@ -312,6 +314,14 @@ function EPlug() {
         }
         Me.SetData([]);
         this.OptionParam = $.extend(this.OptionParam, option);
+        this.loadLocalEnx("eca27c53-9fcb-e35a-5405-c75fe9325a15");
+    };
+
+    //加载本地enx文件
+    this.loadLocalEnx =  function (enxId) {
+        $.get(dataPath + enxId + ".enx", function (data) {
+            Me.SetData(EnxHelper.EnxToLstJson(data));
+        });
     };
 
     //根据组网ID获取组网内容。区分webservices和restful两种接口
@@ -346,16 +356,6 @@ function EPlug() {
                             Me.Property.FileName = data.filename;
                             //设置topolimit和测试床名称
                             $("#txtTopoLimit").val(data.topolimit);
-                            var defaultselectedindex = 0;
-                            $.each(Me.Property.ArrTestBedName, function (index, value) {
-                                if (value.value == data.testbedname) {
-                                    value.selected = true;
-                                    defaultselectedindex = index;
-                                } else {
-                                    value.selected = false;
-                                }
-                            });
-                            Me.LoadTestBedName(defaultselectedindex);
                         }
                     } else {
                         if (data && data.d) {
