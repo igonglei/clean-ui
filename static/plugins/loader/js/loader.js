@@ -85,4 +85,5 @@
             }
         });
     };
+    $.fn.showLoader.defaults = defaults;
 })(jQuery, window, document);
