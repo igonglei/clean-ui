@@ -91,7 +91,7 @@ var Nav = {
         icon: "social-github",
         url: "https://github.com/igonglei/clean-ui"
     }],
-    tpl: '<li class="{cls}"><a href="{url}"><div class="icon"><i class="icon-{icon}"></i></div><div class="text">{text}</div></a></li>',
+    tpl: '<li class="{cls}"><a href="{url}" title="{text}"><div class="icon"><i class="icon-{icon}"></i></div><div class="text">{text}</div></a></li>',
     init: function() {
         var $el = $(this.el),
             data = this.data,
@@ -146,8 +146,8 @@ var Menu = {
         }]
     }],
     tpl: {
-        parent: '<li><div class="item {cls}"><i class="icon-{icon}"></i><span>{text}</span><i class="icon-arrow-up arrow"></i></div><ul class="sub-nav">{subHtml}</ul></li>',
-        child: '<li data-val="{value}" class="{cls}"><a href="{url}"><i class="icon-{icon}"></i><span class="name">{text}</span></a></li>'
+        parent: '<li title="{text}"><div class="item {cls}"><i class="icon-{icon}"></i><span>{text}</span><i class="icon-arrow-up arrow"></i></div><ul class="sub-nav">{subHtml}</ul></li>',
+        child: '<li data-val="{value}" class="{cls}" title="{text}"><a href="{url}"><i class="icon-{icon}"></i><span class="name">{text}</span></a></li>'
     },
     init: function() {
         var $el = $(this.el),

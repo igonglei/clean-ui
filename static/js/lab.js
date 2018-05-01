@@ -1,7 +1,7 @@
 //菜单名称
 NAVNAME = "Home";
 MENUNAME = "lab";
-PAGEHEIGHT = 1100;
+PAGEHEIGHT = 1150;
 
 //初始化
 $(function() {
