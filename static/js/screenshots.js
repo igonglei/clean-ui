@@ -29,8 +29,7 @@ var Screenshots = {
         { title: "环境商城环境搜索", img: "envmall-search.png" },
         { title: "环境商城环境详情", img: "envmall-envinfo.png" },
         { title: "环境商城环境预定", img: "envmall-book.png" },
-        { title: "环境商城自组网", img: "envmall-network.png" },
-        { title: "日志查看", img: "supertool-logview.png" }
+        { title: "环境商城自组网", img: "envmall-network.png" }
     ],
     init: function() {
         var self = this, $el = $(self.el);
