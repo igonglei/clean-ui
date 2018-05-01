@@ -2,12 +2,14 @@
     var plugObj = EnvEditor.Init();
 });
 
-$.fn.showLoader.defaults = {
-    color: "#3c8ad8",
-    backgroundColor: "rgba(255,255,255,0.6)"
-};
+if ($.fn.showLoader) {
+    $.extend($.fn.showLoader.defaults, {
+        color: "#3c8ad8",
+        backgroundColor: "rgba(255,255,255,0.6)"
+    });
+}
 
-var plugPath = "/static/plugins/envEditor/", 
+var plugPath = "static/plugins/envEditor/", 
     imgPath = plugPath + "images/",
     dataPath = plugPath + "data/";
 
@@ -21,7 +23,7 @@ var EnvEditor = new function () {
 
     //编辑器初始化
     this.Init = function (elementId, option) {
-        window.location.hash = "topo";
+        //window.location.hash = "topo";
         var plugObj = new EPlug();
         plugObj.Init("EPlug_Contain", option);
         this.BindEvent(plugObj);
@@ -319,8 +321,12 @@ function EPlug() {
 
     //加载本地enx文件
     this.loadLocalEnx =  function (enxId) {
+        var $content = $(".EplugGraphEditorRightContainer");
+        $content.showLoader();
         $.get(dataPath + enxId + ".enx", function (data) {
             Me.SetData(EnxHelper.EnxToLstJson(data));
+        }).always(function () {
+            $content.hideLoader();
         });
     };
 
@@ -1656,7 +1662,7 @@ var GraphHelper = function (edit) {
 
             mxGraph.prototype.expandedImage = null;
             mxGraph.prototype.collapsedImage = null;
-            mxConnectionHandler.prototype.connectImage = new mxImage(thisObj.Translater.UrlTran(imgPath + 'arrow.png'), 20, 20);
+            mxConnectionHandler.prototype.connectImage = new mxImage(imgPath + 'arrow.png', 20, 20);
             this.Graph.htmlLabels = true;
             this.Graph.getLabel = function (cell) {
                 var label = (this.labelsVisible) ? this.convertValueToString(cell) : '';
@@ -2690,11 +2696,6 @@ var GraphHelper = function (edit) {
             thisObj.AttachCell(tempGraphNode, node);
             return tempGraphNode;
         };
-
-        //图片url的转换，主要防止生成图片的问题
-        this.UrlTran = function (url) {
-            return thisObj.Host + url;
-        }
     }
 
     //设置样式
@@ -2703,7 +2704,7 @@ var GraphHelper = function (edit) {
         var neStyle = {
         };
         neStyle[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_IMAGE;
-        neStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-ne.png');
+        neStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-ne.png';
         neStyle[mxConstants.STYLE_VERTICAL_ALIGN] = mxConstants.ALIGN_TOP;
         neStyle[mxConstants.STYLE_VERTICAL_LABEL_POSITION] = mxConstants.ALIGN_BOTTOM;
         neStyle[mxConstants.STYLE_FONTCOLOR] = '#333';
@@ -2711,46 +2712,46 @@ var GraphHelper = function (edit) {
 
         //测试仪样式
         var testerStyle = $.extend({}, neStyle);
-        testerStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-tester.png');
+        testerStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-tester.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Tester, testerStyle);
 
         var devStyle = $.extend({
         }, neStyle);
-        devStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-tester.png');
+        devStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-tester.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Dev, devStyle);
 
         //ATM样式
         var atmStyle = $.extend({
         }, neStyle);
-        atmStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-atm.png');
+        atmStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-atm.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Atm, atmStyle);
 
         //ETH样式
         var ethStyle = $.extend({
         }, neStyle);
-        ethStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-eth.png');
+        ethStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-eth.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Eth, ethStyle);
 
         //SDH样式
         var sdhStyle = $.extend({
         }, neStyle);
-        sdhStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-sdh.png');
+        sdhStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-sdh.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Sdh, sdhStyle);
 
         //Sftp样式
         var sftpStyle = $.extend({
         }, neStyle);
-        sftpStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-sftp.png');
+        sftpStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-sftp.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Sftp, sftpStyle);
 
         //Agent样式
         var computerStyle = $.extend({}, neStyle);
-        computerStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-agent.png');
+        computerStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-agent.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Agent, computerStyle);
 
         //Network样式
         var networkStyle = $.extend({}, neStyle);
-        networkStyle[mxConstants.STYLE_IMAGE] = thisObj.Translater.UrlTran(imgPath + 'v-network.png');
+        networkStyle[mxConstants.STYLE_IMAGE] = imgPath + 'v-network.png';
         this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Network, networkStyle);
 
         //连线样式

@@ -59,7 +59,7 @@
             //保存请求
             saveAction: "designer/save",
             //获取实验室列表
-            labListAction: "designer/GetLabList",
+            labListAction: "",
             //获取机柜列表
             cabListAction: "designer/GetCabinetNumInfo",
             //获取机柜信息和设备列表
@@ -1320,8 +1320,14 @@
             //获取实验室列表
             getLabList: function(instance) {
                 var opts = instance.options,
-                    self = this;
-                return $.get(opts.labListAction, {
+                    self = this,
+                    url = opts.labListAction;
+                if (!url) {
+                    return $.ajax().done(function() {
+                        instance.labList = [];
+                    });
+                }
+                return $.get(url, {
                     strQuery: JSON.stringify({
                         PDUGID: opts.pdu
                     }),
