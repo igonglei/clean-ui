@@ -84,14 +84,16 @@ var Nav = {
         text: "首页",
         value: "Home",
         icon: "home",
-        url: "index.html"
+        url: "index.html",
+        target: "_self"
     },{
         text: "GitHub",
         value: "GitHub",
         icon: "social-github",
-        url: "https://github.com/igonglei/clean-ui"
+        url: "https://github.com/igonglei/clean-ui",
+        target: "_blank"
     }],
-    tpl: '<li class="{cls}"><a href="{url}" title="{text}"><div class="icon"><i class="icon-{icon}"></i></div><div class="text">{text}</div></a></li>',
+    tpl: '<li class="{cls}"><a href="{url}" title="{text}" target="{target}"><div class="icon"><i class="icon-{icon}"></i></div><div class="text">{text}</div></a></li>',
     init: function() {
         var $el = $(this.el),
             data = this.data,
