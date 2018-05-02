@@ -126,20 +126,20 @@ var Menu = {
             icon: "picture",
             url: "index.html"
         }, {
-            text: "插件实例",
-            value: "plugins",
-            icon: "cursor",
-            url: "plugins.html"
+            text: "环境设计器",
+            value: "editor",
+            icon: "loop",
+            url: "editor.html"
         }, {
             text: "空间布局",
             value: "lab",
             icon: "drawer",
             url: "lab.html"
         }, {
-            text: "环境设计器",
-            value: "editor",
-            icon: "map",
-            url: "editor.html"
+            text: "插件实例",
+            value: "plugins",
+            icon: "cursor",
+            url: "plugins.html"
         }, {
             text: "实验室分布",
             value: "map",
