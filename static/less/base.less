@@ -1,4 +1,4 @@
-@import url('../less/common.less');
+@import "mixins";
 
 html, body {
     .fm;
@@ -7,72 +7,6 @@ html, body {
     .h;
     .minw(@base-min-width);
     .cl(@base-font-color);
-}
-
-a {
-    .cl(@base-color);
-
-    &:hover {
-        .cl(@base-color-hover);
-    }
-
-    &:focus {
-        .ol;
-    }
-}
-
-.btn {
-    .bra(@base-border-radius);
-    .transition(@base-transition);
-
-    &:active, &:focus, &:active:focus {
-        .ol;
-        .bsd;
-    }
-}
-
-.btn-default {
-    &:focus {
-        .bgc;
-        .bc(@btn-border-color);
-    }
-
-    &:hover {
-        .cl(@base-color);
-        .bgc;
-        .bc(@base-color);
-    }
-
-    &:active {
-        &:focus, &:hover {
-            .cl;
-            .bgc(@base-color);
-            .bc(@base-color);
-        }
-    }
-}
-
-.btn-primary {
-    &, &:active, &:focus, &:active:focus {
-        &:extend(.btn-default:active:focus);
-    }
-
-        &:hover {
-            .bgc(@base-color-hover);
-            .bc(@base-color-hover);
-        }
-}
-
-.btn-success {
-    &, &:active, &:focus, &:active:focus {
-        .bgc(@success-color);
-        .bc(@success-color);
-    }
-
-        &:hover {
-            .bgc(@success-color-hover);
-            .bc(@success-color-hover);
-        }
 }
 
 /*Scrollbar style*/
@@ -335,9 +269,4 @@ a {
             }
         }
     }
-}
-
-.input-group-addon {
-    .cl(@base-color);
-    .bgc;
 }
