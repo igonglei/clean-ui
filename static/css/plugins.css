@@ -1,1 +1,44 @@
-.plugins{padding-left:15px}.plugins>div{height:200px;padding-bottom:15px;padding-left:0}.plugins>div>.card{width:100%;height:100%;background-color:#2a7294;border-radius:4px;padding:15px}.plugins>div>.card>div{display:block;margin-left:auto;margin-right:auto}.plugins>div>.card>.pbar1,.plugins>div>.card>.pbar2{height:20px;margin-top:67px}.plugins>div>.card>.divbar{width:100px;height:100%}.plugins>div>.card.darkBg{background-color:#001245}.plugins>div>.card>.csline,.plugins>div>.card>.cspie{width:50%;height:100%}.plugins>div.grid{height:325px}.plugins>div.grid table{width:100%;height:100%}
+.plugins {
+  padding-left: 15px;
+}
+.plugins > div {
+  height: 200px;
+  padding-bottom: 15px;
+  padding-left: 0;
+}
+.plugins > div > .card {
+  width: 100%;
+  height: 100%;
+  background-color: #2a7294;
+  border-radius: 4px;
+  padding: 15px;
+}
+.plugins > div > .card > div {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.plugins > div > .card > .pbar1,
+.plugins > div > .card > .pbar2 {
+  height: 20px;
+  margin-top: 67px;
+}
+.plugins > div > .card > .divbar {
+  width: 100px;
+  height: 100%;
+}
+.plugins > div > .card.darkBg {
+  background-color: #001245;
+}
+.plugins > div > .card > .cspie,
+.plugins > div > .card > .csline {
+  width: 50%;
+  height: 100%;
+}
+.plugins > div.grid {
+  height: 325px;
+}
+.plugins > div.grid table {
+  width: 100%;
+  height: 100%;
+}

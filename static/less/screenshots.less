@@ -1,17 +1,17 @@
 @import "mixins";
 
 .screenshots {
-    .pl(@base-padding);
+    .pl(@padding);
     &>div {
         .h(150px);
-        .pb(@base-padding);
+        .pb(@padding);
         .pl;
         >img {
             .show;
             .size;
-            .transition(@base-transition);
+            .transition;
             .bsd(0 0 5px 2px rgba(0, 0, 0, .1));
-            .bra(4px);
+            .bra;
             &:hover {
                 .transform(translate3d(0, 0, 0) scale(1.1));
             }
@@ -22,7 +22,7 @@
 @media (min-width: 768px) {
     .modal-dialog {
         .w(auto);
-        .m(@base-padding*2);
+        .m(@padding*2);
     }
     .modal-content {
         .bgc(#e7e7e7);
@@ -35,7 +35,7 @@
      .close {
         .mt(-5px);
         .fs(30px);
-        .ol
+        .ol;
      }
 }
 

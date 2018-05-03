@@ -5,8 +5,8 @@ html, body {
     .p;
     .m;
     .h;
-    .minw(@base-min-width);
-    .cl(@base-font-color);
+    .cl;
+    .minw(@min-width);
 }
 
 /*Scrollbar style*/
@@ -15,22 +15,23 @@ html, body {
 }
 
 ::-webkit-scrollbar-thumb {
-    .bgc(@scrollbar-thumb-bgColor);
+    .bgc(@scrollbar-thumb-bg-color);
 
     &:hover {
-        .bgc(lighten(@scrollbar-thumb-bgColor,10%));
+        .bgc(lighten(@scrollbar-thumb-bg-color,10%));
     }
 }
 
 ::-webkit-scrollbar-track-piece {
-    .bgc(lighten(@scrollbar-thumb-bgColor,20%));
+    .bgc(lighten(@scrollbar-thumb-bg-color,20%));
 }
 /*Scrollbar style*/
 
 .container-fluid {
+    @padding: 80px;
     .h;
-    .pl(80px);
-    .pr(80px);
+    .pl(@padding);
+    .pr(@padding);
 }
 
 .gradient {
@@ -42,10 +43,10 @@ html, body {
 
 /*header*/
 @header-height: 100px;
-
+@header-font-color: #fff;
 .header {
-    .cl(@board-color);
-    .p(15px 0);
+    .cl(@header-font-color);
+    .p(@padding 0);
 
     .logo {
         .cursor;
@@ -64,26 +65,23 @@ html, body {
 .user-icon {
     @icon-height: 60px;
     .h(@icon-height);
-    .bra(100%);
-    .bsd(@base-box-shadow);
+    .bra(@full-size);
+    .bsd;
     .m((@header-height - @icon-height)/2 0);
 }
 
 .user-name {
-    .fs(@large-font-size);
+    .fs(@font-size-large);
     .p(0 10px);
-}
-
-.user-logout:hover {
-    .cl;
 }
 /*header*/
 
 /*menu*/
 @bc: #abcfe0;
+@blc: #41a0cd;
 
 .nav-top {
-    list-style: none;
+    .ls;
     .pl;
     .m;
 
@@ -95,16 +93,17 @@ html, body {
 
         &:hover, &.selected {
             >a {
-                .cl;
+                .cl(#fff);
             }
         }
 
         >a {
             .show;
-            .cl(@base-font-color);
+            .cl;
+            .transition;
 
             &:hover, &:focus {
-                text-decoration: none;
+                .td;
             }
         }
 
@@ -113,36 +112,36 @@ html, body {
         }
 
         .text {
-            .fs(@larger-font-size);
+            .fs(@font-size-larger);
         }
     }
 }
 
 .nav-box {
     .pt(20px);
-    list-style: none;
+    .ls;
     .pl;
 
     >li {
-        .bgc(fade(#fff,20%));
+        .bgc(fade(@bg-color,20%));
     }
 
     .item {
         @height: 80px;
         .h(@height);
         .lh(@height);
-        .fs(@larger-font-size);
+        .fs(@font-size-larger);
         .tc;
         .por;
         .pr(30px);
         .cursor;
         .bl(transparent,5px);
         .bb(@bc);
-        .transition(@base-transition);
+        .transition;
 
         &:hover, &.selected {
             .bgc;
-            border-left-color: @base-color;
+            border-left-color: @blc;
         }
 
         >.arrow {
@@ -159,7 +158,7 @@ html, body {
 }
 
 .sub-nav {
-    list-style: none;
+    .ls;
     .pl;
 
     >li {
@@ -170,18 +169,18 @@ html, body {
         .tc;
         .cursor;
         .bl(transparent,5px);
-        .transition(@base-transition);
+        .transition;
         .bsd(-1px 0 10px 1px rgba(255,255,255,.1));
 
         &:hover, &.selected {
             .bgc;
-            border-left-color: @base-color;
+            border-left-color: @blc;
         }
 
         >a {
             .show;
-            .cl(@base-font-color);
-            text-decoration: none;
+            .cl;
+            .td;
 
             >i {
                 .p(0 10px);
@@ -207,8 +206,8 @@ html, body {
 }
 
 .box {
-    .bgc(fade(#fff,20%));
-    .bra(4px);
+    .bgc(fade(@bg-color,20%));
+    .bra;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 
@@ -217,11 +216,11 @@ html, body {
 
     .pure {
         .bgc;
-        .bra(4px);
+        .bra;
         .size;
         .tc;
         .p(20px);
-        .bsd(@base-box-shadow);
+        .bsd;
     }
 }
 
@@ -251,18 +250,19 @@ html, body {
 
         &.top {
             .hide;
-            .bgc(fade(#fff,20%));
-            .bsd(@base-box-shadow);
-            text-decoration: none;
+            .bgc(fade(@bg-color,20%));
+            .bsd;
+            .td;
+            .transition;
 
             &:hover {
-                .bgc(fade(#fff,30%));
+                .bgc(fade(@bg-color,30%));
             }
 
             >.icon {
                 @icon-height: 30px;
                 .fs(@icon-height);
-                .cl;
+                .cl(#fff);
                 .show;
                 .tc;
                 .p((@height - @icon-height)/2 0);
