@@ -1,25 +1,27 @@
-html,
+html {
+  height: 100%;
+}
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   padding: 0;
   margin: 0;
   height: 100%;
   color: #3a3e55;
-  min-width: 1420px;
+  min-width: 1280px;
 }
 /*Scrollbar style*/
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 6px;
+  height: 6px;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #a6a6a6;
+  background-color: #727687;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #c0c0c0;
+  background-color: #8d919f;
 }
 ::-webkit-scrollbar-track-piece {
-  background-color: #d9d9d9;
+  background-color: #a9abb6;
 }
 /*Scrollbar style*/
 .container-fluid {
@@ -179,6 +181,15 @@ body {
 .content {
   margin: 0;
   overflow: hidden;
+  position: relative;
+}
+.content:before,
+.content:after {
+  content: " ";
+  display: table;
+}
+.content:after {
+  clear: both;
 }
 .box {
   background-color: rgba(255, 255, 255, 0.2);
@@ -209,7 +220,7 @@ body {
 /*body*/
 .fixedBar {
   position: fixed;
-  top: 900px;
+  bottom: 20px;
   right: 15px;
   z-index: 500;
 }
@@ -242,4 +253,34 @@ body {
   display: block;
   text-align: center;
   padding: 9px 0;
+}
+.fade-in {
+  -moz-animation: fadeIn 0.4s ease-in-out;
+  -o-animation: fadeIn 0.4s ease-in-out;
+  -webkit-animation: fadeIn 0.4s ease-in-out;
+  animation: fadeIn 0.4s ease-in-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

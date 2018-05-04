@@ -1,6 +1,10 @@
 @import "mixins";
 
-html, body {
+html {
+    .h;
+}
+
+body {
     .fm;
     .p;
     .m;
@@ -203,6 +207,8 @@ html, body {
 .content {
     .m;
     .oh;
+    .por;
+    .clearfix;
 }
 
 .box {
@@ -239,7 +245,7 @@ html, body {
 
 .fixedBar {
     .pof;
-    .pos-tr(900px,15px);
+    .pos-br(20px,15px);
     .zi(500);
 
     >a {
@@ -268,5 +274,39 @@ html, body {
                 .p((@height - @icon-height)/2 0);
             }
         }
+    }
+}
+
+.fade-in {
+    .animation(fadeIn 0.4s ease-in-out);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }
