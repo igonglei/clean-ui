@@ -9,21 +9,6 @@ body {
   color: #3a3e55;
   min-width: 1280px;
 }
-/*Scrollbar style*/
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #727687;
-}
-::-webkit-scrollbar-thumb:hover {
-  background-color: #8d919f;
-}
-::-webkit-scrollbar-track-piece {
-  background-color: #a9abb6;
-}
-/*Scrollbar style*/
 .container-fluid {
   height: 100%;
   padding-left: 80px;
@@ -39,26 +24,50 @@ body {
 .header {
   color: #fff;
   padding: 15px 0;
+  position: relative;
+  overflow: hidden;
+  height: 130px;
 }
-.header .logo {
+.header:before,
+.header:after {
+  content: " ";
+  display: table;
+}
+.header:after {
+  clear: both;
+}
+.header > .header-logo {
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+.header > .header-logo .logo {
   cursor: pointer;
   margin-right: 20px;
   height: 100px;
 }
-.header .title {
+.header > .header-logo .title {
   position: relative;
   top: 12px;
   left: 0;
   font-size: 35px;
   display: inline-block;
 }
-.user-icon {
+.header > .header-nav {
+  text-align: center;
+}
+.header > .header-user {
+  position: absolute;
+  top: 15px;
+  right: 0;
+}
+.header > .header-user .user-icon {
   height: 60px;
   border-radius: 100%;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
   margin: 20px 0;
 }
-.user-name {
+.header > .header-user .user-name {
   font-size: 16px;
   padding: 0 10px;
 }
@@ -72,7 +81,7 @@ body {
 .nav-top > li {
   display: inline-block;
   text-align: center;
-  padding: 7px 30px;
+  padding: 9px 30px;
   cursor: pointer;
 }
 .nav-top > li:hover > a,
@@ -92,7 +101,7 @@ body {
   text-decoration: none;
 }
 .nav-top > li .icon {
-  font-size: 42px;
+  font-size: 40px;
 }
 .nav-top > li .text {
   font-size: 18px;
@@ -191,15 +200,19 @@ body {
 .content:after {
   clear: both;
 }
-.box {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+.content > .content-nav {
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-.content-box {
+.content > .content-body {
   padding: 20px;
+  margin-left: 220px;
+  overflow: hidden;
+  overflow-x: auto;
 }
-.content-box .pure {
+.content > .content-body .pure {
   background-color: #fff;
   border-radius: 4px;
   width: 100%;
@@ -208,14 +221,10 @@ body {
   padding: 20px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
 }
-.no-padding {
-  margin: 0;
-}
-.no-padding > div {
-  padding: 0;
-}
-.no-padding > div.sep {
-  padding-right: 20px;
+.box {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 /*body*/
 .fixedBar {
@@ -255,10 +264,15 @@ body {
   padding: 9px 0;
 }
 .fade-in {
-  -moz-animation: fadeIn 0.4s ease-in-out;
-  -o-animation: fadeIn 0.4s ease-in-out;
-  -webkit-animation: fadeIn 0.4s ease-in-out;
-  animation: fadeIn 0.4s ease-in-out;
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -moz-animation: fadeIn 0.5s ease-in-out;
+  -o-animation: fadeIn 0.5s ease-in-out;
+  -webkit-animation: fadeIn 0.5s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
 }
 @keyframes fadeIn {
   from {
@@ -284,3 +298,18 @@ body {
     opacity: 1;
   }
 }
+/*Scrollbar style*/
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #727687;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8d919f;
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #a9abb6;
+}
+/*Scrollbar style*/

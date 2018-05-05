@@ -44,7 +44,8 @@
                 "border-width": opts.borderWidth,
                 "border-style": opts.borderStyle,
                 height: divHeight,
-                "margin-bottom": margin
+                "margin-bottom": margin,
+                "transition": "all .1s ease-in-out"
             });
             this.fillColor(instance, $div, opts);
         },

@@ -58,7 +58,8 @@ var pBar = {
             borderRadius: 0,
             fillColor: "#FFA800",
             blurColor: "#EFE30F",
-            blur: true
+            blur: true,
+            blurImage: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAb1BMVEX+qgD9sAL8tAP7ugX5vgX4xAf2yAj1zQr00grz1wzx3A3w4Q/w3w7y2A300Qr2ygn4wgb6uwX8swP+rAH7tAP6uQT4wwf1zQnz0Qrx2w3w4Q7y2Az00Ar2yQn4wQb7uQXz0gry1wz2yQj8swIAAADQ0hQXAAAAAWJLR0QktAb5mQAAAAlwSFlzAAALEgAACxIB0t1+/AAAAEpJREFUGNNjYGBkYmZhZWPn4OTi5uHl4xcQFBJmYGAUEWURYxOX4JSU4pGWkZWDCDLJAwXZFcAqZWRRVSqCVSrJCSqDVY6aST0zAU4IGFK83K40AAAAAElFTkSuQmCC"
         });
     }
 };
