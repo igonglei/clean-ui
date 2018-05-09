@@ -91,9 +91,6 @@ body {
 .nav-top > li > a {
   display: block;
   color: #3a3e55;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .nav-top > li > a:hover,
@@ -124,9 +121,6 @@ body {
   cursor: pointer;
   border-left: transparent 5px solid;
   border-bottom: #abcfe0 1px solid;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .nav-box .item:hover,
@@ -154,9 +148,6 @@ body {
   text-align: center;
   cursor: pointer;
   border-left: transparent 5px solid;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
   box-shadow: -1px 0 10px 1px rgba(255, 255, 255, 0.1);
 }
@@ -179,8 +170,6 @@ body {
   width: 70px;
   text-align: left;
   overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
   vertical-align: middle;
@@ -201,14 +190,14 @@ body {
   clear: both;
 }
 .content > .content-nav {
-  width: 200px;
+  width: 250px;
   position: absolute;
   top: 0;
   left: 0;
 }
 .content > .content-body {
   padding: 20px;
-  margin-left: 220px;
+  margin-left: 270px;
   overflow: hidden;
   overflow-x: auto;
 }
@@ -238,8 +227,6 @@ body {
   width: 48px;
   height: 48px;
   overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -248,9 +235,6 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .fixedBar > a.top:hover {
@@ -264,13 +248,9 @@ body {
   padding: 9px 0;
 }
 .fade-in {
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  -moz-animation: fadeIn 0.5s ease-in-out;
-  -o-animation: fadeIn 0.5s ease-in-out;
   -webkit-animation: fadeIn 0.5s ease-in-out;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -283,14 +263,6 @@ body {
   }
 }
 @-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
   from {
     opacity: 0;
   }

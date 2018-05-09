@@ -39,8 +39,6 @@
   height: 28px;
   padding: 2px 15px;
   overflow: hidden;
-  -ms-text-overflow: ellipsis;
-  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

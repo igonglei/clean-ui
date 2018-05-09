@@ -63,10 +63,8 @@
     border-radius: @width;
 }
 
-// Box-sizing
+// Box sizing
 .bs(@size: @box-sizing) {
-    -moz-box-sizing: @size;
-    -webkit-box-sizing: @size;
     box-sizing: @size;
 }
 
@@ -75,7 +73,7 @@
     box-shadow: @style;
 }
 
-// Center-align a block level element
+// Center align
 .center() {
     display: block;
     margin-left: auto;
@@ -100,7 +98,7 @@
     color: @color;
 }
 
-// Cursor pointer
+// Cursor
 .cursor(@cur: pointer) {
     cursor: @cur;
 }
@@ -254,7 +252,7 @@
     right: @right;
 }
 
-// Height & width & line-height
+// Size
 .h(@height: @full-size) {
     height: @height;
 }
@@ -323,8 +321,6 @@
 // Text overflow
 .to() {
     overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -338,7 +334,7 @@
     .bs;
 }
 
-// Text-decoration
+// Text decoration
 .td(@value: none) {
     text-decoration: @value;
 }
@@ -348,38 +344,22 @@
     vertical-align: @align;
 }
 
-// Transitions
+// Transition
 .transition(@transition: @transition) {
-    -moz-transition: @transition;
-    -o-transition: @transition;
-    -webkit-transition: @transition;
     transition: @transition;
 }
 
-// Animations
+// Animation
 .animation(@animation) {
-    -moz-animation: @animation;
-    -o-animation: @animation;
     -webkit-animation: @animation;
     animation: @animation;
 }
 
 // Transform
 .transform(@transform) {
-    -moz-transform: @transform;
-    -ms-transform: @transform;
-    -o-transform: @transform;
     -webkit-transform: @transform;
+    -ms-transform: @transform;
     transform: @transform;
-}
-
-// Transform origin
-.transform-origin(@origin) {
-    -moz-transform-origin: @origin;
-    -ms-transform-origin: @origin;
-    -o-transform-origin: @origin;
-    -webkit-transform-origin: @origin;
-    transform-origin: @origin;
 }
 
 // Z-index
@@ -389,6 +369,5 @@
 
 // Word wrap
 .ww(@wrap: @word-wrap) {
-    -ms-word-wrap: @wrap;
     word-wrap: @wrap;
 }
