@@ -7,12 +7,13 @@ $(function() {
     Loader.init();
     pBar.init();
     divBar.init();
-    csPie.init();
     csGrid.init();
 });
 
 var onPageResize = function() {
-    Loader.reset();
+    Loader.resize();
+    divBar.resize();
+    csGrid.resize();
 };
 
 //加载动画
@@ -33,7 +34,7 @@ var Loader = {
             $(this.el + i).hideLoader();
         }
     },
-    reset: function() {
+    resize: function() {
         this.remove();
         this.init();
     }
@@ -68,25 +69,22 @@ var pBar = {
 var divBar = {
     el: ".divbar",
     init: function() {
-        $(this.el).divbar({
+        this.initBar1();
+        this.initBar2();
+    },
+    initBar1: function() {
+        $(this.el + 1).divbar({
             value: 0.8
         });
-    }
-};
-
-//环形图
-var csPie = {
-    el: ".cspie",
-    init: function() {
-        $(this.el).cspie({
-            series: [{
-                data: [{
-                    value: 0.8
-                }, {
-                    value: 0.2
-                }]
-            }]
+    },
+    initBar2: function() {
+        $(this.el + 2).divbar({
+            value: 0.7,
+            direction: "right"
         });
+    },
+    resize: function() {
+        this.initBar2();
     }
 };
 
@@ -155,5 +153,8 @@ var csGrid = {
                 msg: "这是错误日志！"
             }]
         });
+    },
+    resize: function() {
+        $(this.el).csgrid("resize");
     }
 };

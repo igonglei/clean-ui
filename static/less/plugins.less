@@ -3,7 +3,8 @@
 .plugins {
     .pl(@padding);
     &>div {
-        .h(200px);
+        @height: 200px;
+        .h(@height);
         .pb(@padding);
         .pl;
         >.card {
@@ -11,23 +12,29 @@
             .bgc(#2a7294);
             .bra;
             .p(@padding);
+            .por;
             >div {
                 .center;
+            }
+            >.wave {
+                .mt((@height - @padding*3 - 136)/2);
             }
             >.pbar1,
             >.pbar2 {
                 .h(20px);
-                .mt(67px);
+                .mt((@height - @padding*3 - 20)/2);
             }
-            >.divbar {
+            >.divbar1 {
                 .size(100px);
+                .oh;
+            }
+            >.divbar2 {
+                .size(100%, 80px);
+                .oh;
+                .mt((@height - @padding*3 - 80)/2);
             }
             &.darkBg {
                 .bgc(#001245);
-            }
-            >.cspie,
-            >.csline {
-                .size(50%);
             }
         }
         &.grid {

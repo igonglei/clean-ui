@@ -23,6 +23,8 @@
             borderWidth: 1,
             //边框样式
             borderStyle: "solid",
+            //加载方向，可选值top和right
+            direction: "top",
             //2个分块相隔的距离
             margin: 2,
             //分块数量
@@ -46,11 +48,13 @@
             //初始化
             init: function(instance) {
                 var self = this,
-                    $el = $(instance.dom),
+                    $el = $(instance.dom).empty(),
                     opts = instance.options,
                     divs = opts.divs,
                     margin = opts.margin,
-                    divHeight = $el.height() / divs - margin;
+                    isRight = opts.direction === "right",
+                    size = isRight ? $el.width() : $el.height(),
+                    divSize = size / divs - margin;
                 for (var i = 0; i < divs; i++) {
                     $el.append("<div></div>");
                 }
@@ -59,10 +63,14 @@
                     "border-color": opts.borderColor,
                     "border-width": opts.borderWidth,
                     "border-style": opts.borderStyle,
-                    height: divHeight,
-                    "margin-bottom": margin,
+                    "float": isRight ? "right" : "left",
+                    "width": "100%",
+                    "height": "100%",
+                    "box-sizing": "border-box",
                     "transition": "all .1s ease-in-out"
                 });
+                $div.css(isRight ? "width" : "height", divSize);
+                $div.css(isRight ? "margin-right" : "margin-bottom", margin);
                 this.fillColor(instance, $div, opts);
             },
             //填充颜色

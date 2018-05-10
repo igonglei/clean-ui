@@ -57,7 +57,7 @@ var Page = {
                 if (typeof onPageResize === "function") {
                     onPageResize();
                 }
-            }, 100);
+            }, 20);
         });
     },
     //返回页面顶部
