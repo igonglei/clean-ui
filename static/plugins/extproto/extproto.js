@@ -10,13 +10,15 @@
     };
     //日期增加天数
     Date.prototype.addDays = function(day) {
-        var date = this.clone(), days = date.getDate();
+        var date = this.clone(),
+            days = date.getDate();
         date.setDate(days + day);
         return date;
     };
     //日期增加小时
     Date.prototype.addHours = function(hour) {
-        var date = this.clone(), hours = date.getHours();
+        var date = this.clone(),
+            hours = date.getHours();
         date.setHours(hours + hour);
         return date;
     };
@@ -208,9 +210,11 @@
         if (!tpl || !data) {
             return tpl;
         }
-        var reg = /{(.*?)}/g, match = tpl.match(reg);
+        var reg = /{(.*?)}/g,
+            match = tpl.match(reg);
         $.each(match, function(i, v) {
-            var key = v.replace(reg, "$1"), value = data[key];
+            var key = v.replace(reg, "$1"),
+                value = data[key];
             if (value !== undefined) {
                 tpl = tpl.replace(v, value);
             }
