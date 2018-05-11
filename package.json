@@ -1,0 +1,22 @@
+{
+  "name": "clean-ui-gh-pages",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igonglei/clean-ui.git"
+  },
+  "keywords": [],
+  "author": "gonglei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igonglei/clean-ui/issues"
+  },
+  "homepage": "https://github.com/igonglei/clean-ui#readme",
+  "devDependencies": {
+    "webpack": "^4.8.1"
+  }
+}
