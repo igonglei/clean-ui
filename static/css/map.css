@@ -4,6 +4,7 @@
   height: 100%;
   background-color: #001245;
   background-image: radial-gradient(circle farthest-side, #0074a5 20%, #026392 40%, #001245 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0074a5, endColorstr=#001245, GradientType='1');
   border-radius: 4px;
 }
 .map {

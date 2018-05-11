@@ -32,8 +32,9 @@ var Screenshots = {
         { title: "环境商城自组网", img: "envmall-network.png" }
     ],
     init: function() {
-        var self = this, $el = $(self.el);
-        $.each(self.data, function (i, v) {
+        var self = this,
+            $el = $(self.el);
+        $.each(self.data, function(i, v) {
             $el.append('<div class="col-xs-3"><img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/assets/{img}" title="{title}" data-toggle="tooltip" data-placement="top"></div>'.template(v));
         });
         $el.on("click", "img", function() {
@@ -42,6 +43,6 @@ var Screenshots = {
             $(self.elModalLabel).html($img.attr("data-original-title"));
             $(self.elModal).modal();
         });
-         $('[data-toggle="tooltip"]').tooltip({ container: 'body' });
+        $('[data-toggle="tooltip"]').tooltip({ container: 'body' });
     }
 };

@@ -1,10 +1,13 @@
 @import "mixins";
 
 .map-content {
+    @sc: #0074a5;
+    @ec: #001245;
     .por;
     .size;
-    .bgc(#001245);
-    background-image: radial-gradient(circle farthest-side, #0074a5 20%, #026392 40%, #001245 100%);
+    .bgc(@ec);
+    background-image: radial-gradient(circle farthest-side, @sc 20%, #026392 40%, @ec 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@sc, endColorstr=@ec, GradientType='1');
     .bra;
 }
 

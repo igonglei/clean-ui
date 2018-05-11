@@ -1,7 +1,9 @@
 //常量
 var ERRCODE_SUCCESS = "0x0000",
     PAGEHEIGHT = 900,
-    NAVNAME = "Home", MENUNAME = "screenshots", LOADER = {
+    NAVNAME = "Home",
+    MENUNAME = "screenshots",
+    LOADER = {
         color: '#00aaff',
         backgroundColor: 'rgba(238,238,238,0.3)'
     };
@@ -12,9 +14,11 @@ String.prototype.template = function(data) {
     if (!tpl || !data) {
         return tpl;
     }
-    var reg = /{(.*?)}/g, match = tpl.match(reg);
+    var reg = /{(.*?)}/g,
+        match = tpl.match(reg);
     $.each(match, function(i, v) {
-        var key = v.replace(reg, "$1"), value = data[key];
+        var key = v.replace(reg, "$1"),
+            value = data[key];
         if (value !== undefined) {
             tpl = tpl.replace(v, value);
         }
@@ -86,7 +90,7 @@ var Nav = {
         icon: "home",
         url: "index.html",
         target: "_self"
-    },{
+    }, {
         text: "GitHub",
         value: "GitHub",
         icon: "social-github",
