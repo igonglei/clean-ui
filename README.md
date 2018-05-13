@@ -9,8 +9,8 @@
 ### 预览图
 <p>
   <a href="https://igonglei.github.io/clean-ui/" target="_blank">
-    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/preview/plugins.png">
-    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/gh-pages/preview/map.png">
+    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/master/screenshots/editor.png">    
+    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/master/screenshots/lab.png">
   </a>
 </p>
 
