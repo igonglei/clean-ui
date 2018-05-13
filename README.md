@@ -1,6 +1,6 @@
 # Clean UI
 
-> 基于jQuery&CSS3的插件库
+> 个人作品展示
 
 ## 预览
 

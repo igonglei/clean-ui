@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>作品截图</title>
+    <link href="static/favicon.ico" rel="icon" type="image/x-icon" />
+    <link href="css/index.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid gradient">
+        <div class="header">
+            <div class="header-logo">
+                <img class="logo" src="static/images/logo.png" onclick="location.href='index.html'" />
+                <div class="title">
+                    <span>Clean UI</span>
+                </div>
+            </div>
+            <div class="header-nav">
+                <ul class="nav-top" id="nav">
+                </ul>
+            </div>
+            <div class="header-user">
+                <img class="user-icon" src="static/images/icon.jpg" />
+                <span class="user-name">龚磊</span>
+            </div>
+        </div>
+        <div class="content fade-in">
+            <div class="box content-nav">
+                <ul class="nav-box" id="menu">
+                </ul>
+            </div>
+            <div class="box content-body">
+                <div class="row screenshots"></div>
+            </div>
+        </div>
+        <div class="fixedBar">
+            <a title="Top" class="top" href="javascript:void(0)">
+                <i class="icon-arrow-up icon"></i>
+            </a>
+        </div>
+    </div>
+    <div class="modal fade" id="scModal" tabindex="-1" role="dialog" aria-labelledby="scModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="scModalLabel"></h4>
+                </div>
+                <div class="modal-body">
+                    <img id="scImg" src="static/images/logo.png" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
