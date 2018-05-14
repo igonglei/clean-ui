@@ -109,13 +109,13 @@ const minifyJsAll = (inputJs, outputJs) => {
             drop_console: true
         }
     }).code, "utf8")
-    console.log(`Minify js successfully, ${outputJs}`.green)
+    console.log(outputJs.green)
 }
 
 const buildCssAll = (inputLess, outputCss) => {
     return less.render(fs.readFileSync(inputLess, "utf8"), { filename: path.resolve(inputLess) }).then(output => {
         fs.writeFileSync(outputCss, output.css, "utf8")
-        console.log(`Build css successfully, ${outputCss}`.green)
+        console.log(outputCss.green)
     }, err => {
         console.error(err.message.red)
     })
@@ -133,7 +133,7 @@ const minifyCssAll = (inputCss, outputCss) => {
             }
         }
     }).minify(inputCss).styles, "utf8")
-    console.log(`Minify css successfully, ${outputCss}`.green)
+    console.log(outputCss.green)
 }
 
 const minifyHtml = (inputHtml, outputHtml) => {
@@ -150,28 +150,36 @@ const minifyHtml = (inputHtml, outputHtml) => {
         sortAttributes: true,
         sortClassName: true
     }), "utf8")
-    console.log(`Minify html successfully, ${outputHtml}`.green)
+    console.log(outputHtml.green)
 }
 
 init()
 
+console.log("Minify js...")
 for (let [name, js] of Object.entries(allJs)) {
     minifyJsAll(js, `${outputJsDir}${name}.js`)
 }
 
+console.log("Minify html...")
 for (let [name, html] of Object.entries(allHtml)) {
     minifyHtml(html, `${distDir}${name}.html`)
 }
 
+console.log("Build less...")
 const promiseArray = []
 for (let [name, less] of Object.entries(allLess)) {
     promiseArray.push(buildCssAll(less, `${userCssDir}${name}.css`))
 }
 Promise.all(promiseArray).then(() => {
+    console.log("Minify css...")
     for (let [name, css] of Object.entries(allCss)) {
         minifyCssAll(css, `${outputCssDir}${name}.css`)
     }
-    console.log("Start copy static directory")
-    fse.copySync(staticDir, distDir + staticDir)
     console.log("Build done.".green)
+    console.log("Start copy static directory...")
+    fse.copy(staticDir, distDir + staticDir).then(() => {
+        console.log("Copy done.".green)
+    }, err => {
+        console.error(`Copy failed, ${err}`.red)
+    })
 })
