@@ -12,10 +12,10 @@ const srcDir = "src/"
 const distDir = "dist/"
 const thirdDir = `${staticDir}third/`
 const pluginDir = `${staticDir}plugins/`
-var userJsDir = `${srcDir}js/`
-var userCssDir = `${srcDir}css/`
-var userLessDir = `${srcDir}less/`
-var userPageDir = `${srcDir}page/`
+const userJsDir = `${srcDir}js/`
+const userCssDir = `${srcDir}css/`
+const userLessDir = `${srcDir}less/`
+const userPageDir = `${srcDir}page/`
 const outputJsDir = `${distDir}js/`
 const outputCssDir = `${distDir}css/`
 
@@ -88,11 +88,12 @@ const allHtml = {
     plugins: `${userPageDir}plugins.html`
 }
 
-const initDistDir = () => {
+const init = () => {
     if (!fs.existsSync(distDir)) {
         fs.mkdirSync(distDir)
+        console.log("Create dist directory.".green)
     }
-    fse.copySync(staticDir, distDir + staticDir)
+    console.log("Start building...")
 }
 
 const minifyJsAll = (inputJs, outputJs) => {
@@ -152,10 +153,14 @@ const minifyHtml = (inputHtml, outputHtml) => {
     console.log(`Minify html successfully, ${outputHtml}`.green)
 }
 
-initDistDir()
+init()
 
 for (let [name, js] of Object.entries(allJs)) {
     minifyJsAll(js, `${outputJsDir}${name}.js`)
+}
+
+for (let [name, html] of Object.entries(allHtml)) {
+    minifyHtml(html, `${distDir}${name}.html`)
 }
 
 const promiseArray = []
@@ -166,8 +171,7 @@ Promise.all(promiseArray).then(() => {
     for (let [name, css] of Object.entries(allCss)) {
         minifyCssAll(css, `${outputCssDir}${name}.css`)
     }
+    console.log("Start copy static directory")
+    fse.copySync(staticDir, distDir + staticDir)
+    console.log("Build done.".green)
 })
-
-for (let [name, html] of Object.entries(allHtml)) {
-    minifyHtml(html, `${distDir}${name}.html`)
-}
