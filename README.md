@@ -30,6 +30,16 @@
 
 ### [divbar](https://github.com/igonglei/divbar)
 
+## 编译步骤
+
+``` bash
+# 安装依赖
+npm install
+
+# 编译生成
+npm run build
+```
+
 ### 1、loader.js
 >CSS3加载动画插件，支持多种动画，用法简单，美观实用，支持ie10~ie11和chrome
 
