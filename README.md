@@ -1,6 +1,6 @@
 # Clean UI
 
-> 个人作品展示
+> 个人近年来的作品截图以及部分实例展示
 
 ## 预览
 
@@ -8,11 +8,27 @@
 
 ### 预览图
 <p>
-  <a href="https://igonglei.github.io/clean-ui/" target="_blank">
-    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/master/screenshots/editor.png">    
+  <a href="https://igonglei.github.io/clean-ui/editor.html" target="_blank">
+    <img src="https://raw.githubusercontent.com/igonglei/clean-ui/master/screenshots/editor.png">
+  </a>
+  <a href="https://igonglei.github.io/clean-ui/lab.html" target="_blank">
     <img src="https://raw.githubusercontent.com/igonglei/clean-ui/master/screenshots/lab.png">
   </a>
 </p>
+
+## 封装插件
+
+### [env-editor](https://github.com/igonglei/env-editor)
+
+### [lab-designer](https://github.com/igonglei/lab-designer)
+
+### [csgrid](https://github.com/igonglei/csgrid)
+
+### [loader](https://github.com/igonglei/loader)
+
+### [pbar](https://github.com/igonglei/pbar)
+
+### [divbar](https://github.com/igonglei/divbar)
 
 ### 1、loader.js
 >CSS3加载动画插件，支持多种动画，用法简单，美观实用，支持ie10~ie11和chrome
