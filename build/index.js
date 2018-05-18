@@ -126,6 +126,7 @@ const minifyCssAll = (inputCss, outputCss) => {
         fs.mkdirSync(outputCssDir)
     }
     fs.writeFileSync(outputCss, new cleancss({
+        compatibility: 'ie9',
         rebaseTo: "root",
         level: {
             1: {
