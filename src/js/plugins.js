@@ -74,13 +74,15 @@ var divBar = {
     },
     initBar1: function() {
         $(this.el + 1).divbar({
-            value: 0.8
+            value: 0.8,
+            borderColor: "#f5f1c5"
         });
     },
     initBar2: function() {
         $(this.el + 2).divbar({
             value: 0.7,
-            direction: "right"
+            direction: "right",
+            borderColor: "#f5f1c5"
         });
     },
     resize: function() {

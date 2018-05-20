@@ -21,8 +21,8 @@ body {
 }
 
 .gradient {
-    @sc: #307fa5;
-    @ec: #5dbeec;
+    @sc: #d2cea2;
+    @ec: #e8e4b6;
     background-image: linear-gradient(to right,@sc,@ec 60%,@sc); /*W3C standard*/
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=@sc, endColorstr=@ec, GradientType='1'); /*IE*/
 }
@@ -40,19 +40,20 @@ body {
 
     >.header-logo {
         .poa;
-        .pos-tl(15px);
+        .pos-tl(35px);
 
         .logo {
             .cursor;
             .mr(20px);
-            .h(@header-height);
+            .h(60px);
+            .va;
         }
 
         .title {
-            .por;
-            .pos-tl(12px);
+            .show(true);
             .fs(35px);
             .show(true);
+            .va;
         }
     }
 
@@ -81,8 +82,8 @@ body {
 /*header*/
 
 /*menu*/
-@bc: #abcfe0;
-@blc: #41a0cd;
+@bc: #d4d0a4;
+@blc: #dc2222;
 
 .nav-top {
     .ls;
