@@ -15,9 +15,9 @@ body {
   padding-right: 80px;
 }
 .gradient {
-  background-image: linear-gradient(to right, #d2cea2, #e8e4b6 60%, #d2cea2);
+  background-image: linear-gradient(to right, #d6cebf, #e8dfcc 60%, #d6cebf);
   /*W3C standard*/
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d2cea2, endColorstr=#e8e4b6, GradientType='1');
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d6cebf, endColorstr=#e8dfcc, GradientType='1');
   /*IE*/
 }
 /*header*/
@@ -26,7 +26,7 @@ body {
   padding: 15px 0;
   position: relative;
   overflow: hidden;
-  height: 130px;
+  height: 120px;
 }
 .header:before,
 .header:after {
@@ -38,33 +38,39 @@ body {
 }
 .header > .header-logo {
   position: absolute;
-  top: 35px;
+  top: 30px;
   left: 0;
+}
+.header > .header-logo > img,
+.header > .header-logo div {
+  display: inline-block;
+  vertical-align: middle;
 }
 .header > .header-logo .logo {
   cursor: pointer;
   margin-right: 20px;
   height: 60px;
-  vertical-align: middle;
 }
 .header > .header-logo .title {
   font-size: 35px;
-  display: inline-block;
-  vertical-align: middle;
 }
 .header > .header-nav {
   text-align: center;
 }
 .header > .header-user {
   position: absolute;
-  top: 15px;
+  top: 35px;
   right: 0;
 }
+.header > .header-user > img,
+.header > .header-user span {
+  display: inline-block;
+  vertical-align: middle;
+}
 .header > .header-user .user-icon {
-  height: 60px;
+  height: 50px;
   border-radius: 100%;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
-  margin: 20px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 .header > .header-user .user-name {
   font-size: 16px;
@@ -74,14 +80,16 @@ body {
 /*menu*/
 .nav-top {
   list-style: none;
-  padding-left: 0;
   margin: 0;
+  padding: 8px 0;
 }
 .nav-top > li {
   display: inline-block;
   text-align: center;
-  padding: 9px 30px;
+  height: 74px;
+  margin: 0 30px;
   cursor: pointer;
+  width: 80px;
 }
 .nav-top > li:hover > a,
 .nav-top > li.selected > a {
@@ -97,10 +105,14 @@ body {
   text-decoration: none;
 }
 .nav-top > li .icon {
-  font-size: 40px;
+  font-size: 35px;
+}
+.nav-top > li .icon > img {
+  height: 36px;
+  margin-bottom: 7px;
 }
 .nav-top > li .text {
-  font-size: 18px;
+  font-size: 17px;
 }
 .nav-box {
   padding-top: 20px;
@@ -108,7 +120,7 @@ body {
   padding-left: 0;
 }
 .nav-box > li {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #e6e2d9;
 }
 .nav-box .item {
   height: 80px;
@@ -119,13 +131,13 @@ body {
   padding-right: 30px;
   cursor: pointer;
   border-left: transparent 5px solid;
-  border-bottom: #d4d0a4 1px solid;
+  border-bottom: #ded8cc 1px solid;
   transition: all 0.1s ease-in-out;
 }
 .nav-box .item:hover,
 .nav-box .item.selected {
   background-color: #fff;
-  border-left-color: #dc2222;
+  border-left-color: #f95f5b;
 }
 .nav-box .item > .arrow {
   position: absolute;
@@ -143,7 +155,7 @@ body {
 .sub-nav > li {
   height: 60px;
   line-height: 60px;
-  border-bottom: #d4d0a4 1px solid;
+  border-bottom: #ded8cc 1px solid;
   text-align: center;
   cursor: pointer;
   border-left: transparent 5px solid;
@@ -153,7 +165,7 @@ body {
 .sub-nav > li:hover,
 .sub-nav > li.selected {
   background-color: #fff;
-  border-left-color: #dc2222;
+  border-left-color: #f95f5b;
 }
 .sub-nav > li > a {
   display: block;
@@ -207,12 +219,12 @@ body {
   height: 100%;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 .box {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 /*body*/
 .fixedBar {
@@ -232,12 +244,12 @@ body {
 .fixedBar > a.top {
   display: none;
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
   text-decoration: none;
   transition: all 0.1s ease-in-out;
 }
 .fixedBar > a.top:hover {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: #f95f5b;
 }
 .fixedBar > a.top > .icon {
   font-size: 30px;

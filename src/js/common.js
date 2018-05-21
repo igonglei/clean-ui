@@ -96,12 +96,23 @@ var Nav = {
         icon: "social-github",
         url: "https://github.com/igonglei/clean-ui",
         target: "_blank"
+    }, {
+        text: "SuperTool",
+        value: "SuperTool",
+        icon: "stool.png",
+        iconType: "image",
+        url: "https://igonglei.github.io/super-tool/",
+        target: "_blank"
     }],
-    tpl: '<li class="{cls}"><a href="{url}" title="{text}" target="{target}"><div class="icon"><i class="icon-{icon}"></i></div><div class="text">{text}</div></a></li>',
+    tpl: '<li class="{cls}"><a href="{url}" target="{target}"><div class="icon">{iconTpl}</div><div class="text">{text}</div></a></li>',
+    iconTpl: '<i class="icon-{icon}"></i>',
+    imgTpl: '<img src="static/images/{icon}">',
     init: function() {
         var $el = $(this.el),
             data = this.data,
             tpl = this.tpl,
+            iconTpl = this.iconTpl,
+            imgTpl = this.imgTpl,
             selectedCls = this.selectedCls,
             html = "";
         if (!NAVNAME && data.length > 0) {
@@ -111,7 +122,8 @@ var Nav = {
             if (v.value === NAVNAME) {
                 v.cls = selectedCls;
             }
-            html += tpl.template(v);
+            var iTpl = v.iconType == "image" ? imgTpl : iconTpl;
+            html += tpl.template({ iconTpl: iTpl }).template(v);
         });
         $el.html(html);
     }
@@ -152,8 +164,8 @@ var Menu = {
         }]
     }],
     tpl: {
-        parent: '<li title="{text}"><div class="item {cls}"><i class="icon-{icon}"></i><span>{text}</span><i class="icon-arrow-up arrow"></i></div><ul class="sub-nav">{subHtml}</ul></li>',
-        child: '<li data-val="{value}" class="{cls}" title="{text}"><a href="{url}"><i class="icon-{icon}"></i><span class="name">{text}</span></a></li>'
+        parent: '<li><div class="item {cls}"><i class="icon-{icon}"></i><span>{text}</span><i class="icon-arrow-up arrow"></i></div><ul class="sub-nav">{subHtml}</ul></li>',
+        child: '<li data-val="{value}" class="{cls}"><a href="{url}"><i class="icon-{icon}"></i><span class="name">{text}</span></a></li>'
     },
     init: function() {
         var $el = $(this.el),
