@@ -128,7 +128,7 @@ body {
   font-size: 18px;
   text-align: center;
   position: relative;
-  padding-right: 30px;
+  padding-right: 50px;
   cursor: pointer;
   border-left: transparent 5px solid;
   border-bottom: #ded8cc 1px solid;
@@ -178,7 +178,7 @@ body {
 }
 .sub-nav > li > a > .name {
   display: inline-block;
-  width: 70px;
+  width: 80px;
   text-align: left;
   overflow: hidden;
   text-overflow: ellipsis;
