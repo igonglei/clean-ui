@@ -27,7 +27,8 @@ const thirdCss = [`${thirdDir}bootstrap/css/bootstrap.min.css`,
 ]
 
 const allJs = {
-    index: [...thirdJs, `${userJsDir}common.js`,
+    index: [...thirdJs, `${thirdDir}toastr/toastr.min.js`,
+        `${userJsDir}common.js`,
         `${userJsDir}screenshots.js`
     ],
     editor: [...thirdJs, `${thirdDir}toastr/toastr.min.js`,
@@ -59,7 +60,8 @@ const allLess = {
     screenshots: `${userLessDir}screenshots.less`
 }
 const allCss = {
-    index: [...thirdCss, `${userCssDir}base.css`,
+    index: [...thirdCss, `${thirdDir}toastr/toastr.min.css`,
+        `${userCssDir}base.css`,
         `${userCssDir}screenshots.css`
     ],
     editor: [...thirdCss, `${thirdDir}toastr/toastr.min.css`,
@@ -97,14 +99,21 @@ const init = () => {
 }
 
 const minifyJsAll = (inputJs, outputJs) => {
-    let codes = {}
-    inputJs.forEach((js, i) => {
-        codes[i] = fs.readFileSync(js, "utf8")
-    })
     if (!fs.existsSync(outputJsDir)) {
         fs.mkdirSync(outputJsDir)
     }
-    fs.writeFileSync(outputJs, uglifyjs.minify(codes, {
+    fs.writeFileSync(outputJs, "", "utf8")
+    let codes = {}
+    inputJs.forEach((js, i) => {
+        let filename = path.basename(js, '.js')
+        let res = fs.readFileSync(js, "utf8")
+        if (filename.indexOf('.min') > -1) {
+            fs.appendFileSync(outputJs, res, "utf8")
+        } else {
+            codes[i] = res
+        }
+    })
+    fs.appendFileSync(outputJs, uglifyjs.minify(codes, {
         compress: {
             drop_console: true
         }

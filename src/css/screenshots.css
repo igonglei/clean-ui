@@ -33,9 +33,13 @@
   border: none;
 }
 .modal-header .close {
-  margin-top: -5px;
-  font-size: 30px;
+  font-size: 25px;
   outline: none;
+}
+.modal-header .close.fullscreen {
+  margin-top: 0;
+  font-size: 20px;
+  margin-right: 10px;
 }
 .modal-body {
   padding: 0;
