@@ -10,6 +10,7 @@ body {
     .m;
     .h;
     .cl;
+    .bgc(#d6cebf);
     .minw(@min-width);
 }
 
@@ -322,6 +323,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
     .bgc(@scrollbar-thumb-bg-color);
+    -webkit-border-radius: 3px;
 
     &:hover {
         .bgc(lighten(@scrollbar-thumb-bg-color,10%));
@@ -329,6 +331,6 @@ body {
 }
 
 ::-webkit-scrollbar-track-piece {
-    .bgc(lighten(@scrollbar-thumb-bg-color,20%));
+    .bgc(fade(#fff,0%));
 }
 /*Scrollbar style*/
