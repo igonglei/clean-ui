@@ -102,20 +102,14 @@ const minifyJsAll = (inputJs, outputJs) => {
     if (!fs.existsSync(outputJsDir)) {
         fs.mkdirSync(outputJsDir)
     }
-    fs.writeFileSync(outputJs, "", "utf8")
     let codes = {}
     inputJs.forEach((js, i) => {
-        let filename = path.basename(js, '.js')
-        let res = fs.readFileSync(js, "utf8")
-        if (filename.indexOf('.min') > -1) {
-            fs.appendFileSync(outputJs, res, "utf8")
-        } else {
-            codes[i] = res
-        }
+        codes[i] = fs.readFileSync(js, "utf8")
     })
-    fs.appendFileSync(outputJs, uglifyjs.minify(codes, {
+    fs.writeFileSync(outputJs, uglifyjs.minify(codes, {
         compress: {
-            drop_console: true
+            drop_console: true,
+            hoist_props: false
         }
     }).code, "utf8")
     console.log(outputJs.green)
