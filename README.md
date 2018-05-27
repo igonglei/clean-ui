@@ -4,7 +4,7 @@
 
 ## 预览
 
-### [在线预览](https://igonglei.github.io/clean-ui/)
+### [在线预览](https://igonglei.github.io/clean-ui/){:target="_blank"}
 
 ### 预览图
 <p>
@@ -18,22 +18,22 @@
 
 ## 封装插件
 
-### [env-editor](https://github.com/igonglei/env-editor)
+### [env-editor](https://github.com/igonglei/env-editor){:target="_blank"}
 > 基于mxGraph的可视化环境组网设计器
 
-### [lab-designer](https://github.com/igonglei/lab-designer)
+### [lab-designer](https://github.com/igonglei/lab-designer){:target="_blank"}
 > 基于mxGraph的可视化实验室设计器
 
-### [csgrid](https://github.com/igonglei/csgrid)
+### [csgrid](https://github.com/igonglei/csgrid){:target="_blank"}
 > 基于jquery的表格插件
 
-### [loader](https://github.com/igonglei/loader)
+### [loader](https://github.com/igonglei/loader){:target="_blank"}
 > 基于css3和jquery的加载动画插件
 
-### [pbar](https://github.com/igonglei/pbar)
+### [pbar](https://github.com/igonglei/pbar){:target="_blank"}
 > 基于jquery和css3的进度条插件
 
-### [divbar](https://github.com/igonglei/divbar)
+### [divbar](https://github.com/igonglei/divbar){:target="_blank"}
 > 基于jquery的音波状进度条插件
 
 ## 编译步骤
