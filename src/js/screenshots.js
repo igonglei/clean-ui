@@ -55,7 +55,9 @@ var Screenshots = {
         });
     },
     showBigImg: function($img) {
-        $(this.elImg).attr("src", $img.attr("src")).attr("data-index", $img.attr("data-index"));
+        $(this.elImg).addClass('fade').one('animationend webkitAnimationEnd', function() {
+            $(this).removeClass('fade');
+        }).attr("src", $img.attr("src")).attr("data-index", $img.attr("data-index"));
         $(this.elModalLabel).html($img.attr("data-original-title"));
     },
     enterFullscreen: function() {
