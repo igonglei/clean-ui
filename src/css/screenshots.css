@@ -15,9 +15,9 @@
   border-radius: 4px;
 }
 .screenshots > div > img:hover {
-  -webkit-transform: translate3d(0, 0, 0) scale(1.1);
-  -ms-transform: translate3d(0, 0, 0) scale(1.1);
-  transform: translate3d(0, 0, 0) scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
 }
 @media (min-width: 768px) {
   .modal-dialog {
@@ -43,6 +43,13 @@
 }
 .modal-body {
   padding: 0;
+}
+.scImg {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
 }
 .fade {
   -webkit-animation: fade 0.5s ease-in-out;
