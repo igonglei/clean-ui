@@ -19,38 +19,38 @@ const userPageDir = `${srcDir}page/`
 const outputJsDir = `${distDir}js/`
 const outputCssDir = `${distDir}css/`
 
-const thirdJs = [`${thirdDir}jquery/jquery.min.js`,
-    `${thirdDir}bootstrap/js/bootstrap.min.js`
+const commonJs = [`${thirdDir}jquery/jquery.min.js`,
+    `${thirdDir}bootstrap/js/bootstrap.min.js`,
+    `${userJsDir}common.js`
 ]
-const thirdCss = [`${thirdDir}bootstrap/css/bootstrap.min.css`,
-    `${thirdDir}simple-line-icons/css/simple-line-icons.min.css`
+const commonCss = [`${thirdDir}bootstrap/css/bootstrap.min.css`,
+    `${thirdDir}simple-line-icons/css/simple-line-icons.min.css`,
+    `${userCssDir}base.css`
 ]
 
 const allJs = {
-    index: [...thirdJs, `${thirdDir}toastr/toastr.min.js`,
-        `${userJsDir}common.js`,
+    index: [...commonJs, `${thirdDir}toastr/toastr.min.js`,
         `${userJsDir}screenshots.js`
     ],
-    editor: [...thirdJs, `${thirdDir}toastr/toastr.min.js`,
-        `${pluginDir}loader/js/loader.min.js`,
-        `${userJsDir}common.js`
+    editor: [...commonJs, `${thirdDir}toastr/toastr.min.js`,
+        `${pluginDir}loader/js/loader.min.js`
     ],
     envEditor: [`${pluginDir}envEditor/js/enxHelper.min.js`,
         `${pluginDir}envEditor/js/envEditor.min.js`
     ],
-    lab: [...thirdJs, `${pluginDir}labDesigner/js/labDesigner.min.js`,
-        `${userJsDir}common.js`,
+    lab: [...commonJs, `${pluginDir}labDesigner/js/labDesigner.min.js`,
         `${userJsDir}lab.js`
     ],
-    plugins: [...thirdJs, `${pluginDir}loader/js/loader.min.js`,
+    plugins: [...commonJs, `${pluginDir}loader/js/loader.min.js`,
         `${pluginDir}csgrid/js/csgrid.min.js`,
         `${pluginDir}pbar/pbar.min.js`,
         `${pluginDir}divbar/divbar.min.js`,
-        `${userJsDir}common.js`,
         `${userJsDir}plugins.js`
     ],
-    map: [...thirdJs, `${userJsDir}common.js`,
-        `${userJsDir}map.js`
+    map: [...commonJs, `${userJsDir}map.js`],
+    topo: [...commonJs, `${pluginDir}loader/js/loader.min.js`,
+        `${pluginDir}topoViewer/js/topoViewer.min.js`,
+        `${userJsDir}topo.js`
     ]
 }
 const allLess = {
@@ -60,34 +60,31 @@ const allLess = {
     screenshots: `${userLessDir}screenshots.less`
 }
 const allCss = {
-    index: [...thirdCss, `${thirdDir}toastr/toastr.min.css`,
-        `${userCssDir}base.css`,
+    index: [...commonCss, `${thirdDir}toastr/toastr.min.css`,
         `${userCssDir}screenshots.css`
     ],
-    editor: [...thirdCss, `${thirdDir}toastr/toastr.min.css`,
+    editor: [...commonCss, `${thirdDir}toastr/toastr.min.css`,
         `${pluginDir}loader/css/loader.min.css`,
-        `${userCssDir}base.css`,
         `${pluginDir}envEditor/css/envEditor.min.css`
     ],
-    lab: [...thirdCss, `${userCssDir}base.css`,
-        `${pluginDir}labDesigner/css/labDesigner.min.css`
-    ],
-    plugins: [...thirdCss, `${userCssDir}base.css`,
-        `${pluginDir}loader/css/loader.min.css`,
+    lab: [...commonCss, `${pluginDir}labDesigner/css/labDesigner.min.css`],
+    plugins: [...commonCss, `${pluginDir}loader/css/loader.min.css`,
         `${pluginDir}csgrid/css/csgrid.min.css`,
         `${pluginDir}waterball/waterball.min.css`,
         `${userCssDir}plugins.css`
     ],
-    map: [...thirdCss, `${userCssDir}base.css`,
-        `${userCssDir}map.css`
-    ]
+    map: [...commonCss, `${userCssDir}map.css`],
+    topo: [...commonCss, `${pluginDir}loader/css/loader.min.css`,
+        `${pluginDir}topoViewer/css/topoViewer.min.css`,
+    ],
 }
 const allHtml = {
     index: `${userPageDir}index.html`,
     editor: `${userPageDir}editor.html`,
     map: `${userPageDir}map.html`,
     lab: `${userPageDir}lab.html`,
-    plugins: `${userPageDir}plugins.html`
+    plugins: `${userPageDir}plugins.html`,
+    topo: `${userPageDir}topo.html`
 }
 
 const init = () => {

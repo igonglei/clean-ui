@@ -152,6 +152,11 @@ var Menu = {
             icon: "drawer",
             url: "lab.html"
         }, {
+            text: "拓扑大网",
+            value: "topo",
+            icon: "link",
+            url: "topo.html"
+        }, {
             text: "插件实例",
             value: "plugins",
             icon: "cursor",
