@@ -8,6 +8,11 @@
     <title>拓扑大网 - CleanUI</title>
     <link href="static/favicon.ico" rel="icon" type="image/x-icon" />
     <link href="css/topo.css" rel="stylesheet" />
+    <style type="text/css">
+        .topo-content > div {
+            min-width: 950px;
+        }
+    </style>
 </head>
 
 <body>
@@ -41,22 +46,22 @@
                             <div class="row info">
                                 <div class="col-xs-6">
                                     <p>
-                                        <span class="status" id="linkStatus">正常/<span>Normal</span></span>
-                                        <span class="sdn-title">链路状态<span>Link Status</span></span>
+                                        <span class="status" id="linkStatus">正常</span>
+                                        <span class="sdn-title">链路状态</span>
                                     </p>
                                     <p>
                                         <span class="value blue" id="fpRegCount">0</span>
-                                        <span class="sdn-title">FP注册数量<span>FP Registered Quantity</span></span>
+                                        <span class="sdn-title">FP注册数量</span>
                                     </p>
                                 </div>
                                 <div class="col-xs-6">
                                     <p>
-                                        <span class="status" id="mainSncStatus">正常/<span>Normal</span></span>
-                                        <span class="sdn-title">主SNC状态<span>Master SNC Status</span></span>
+                                        <span class="status" id="mainSncStatus">正常</span>
+                                        <span class="sdn-title">主SNC状态</span>
                                     </p>
                                     <p>
-                                        <span class="status res" id="sncStatus">正常/<span>Normal</span></span>
-                                        <span class="sdn-title">备SNC状态<span>Slave SNC Status</span></span>
+                                        <span class="status res" id="sncStatus">正常</span>
+                                        <span class="sdn-title">备SNC状态</span>
                                     </p>
                                 </div>
                             </div>
@@ -69,21 +74,21 @@
                                 <div class="col-xs-6">
                                     <p>
                                         <span class="value yellow" id="routerUnlinked">0</span>
-                                        <span class="sdn-title">未连通链路<span>Unconnected Link</span></span>
+                                        <span class="sdn-title">未连通链路</span>
                                     </p>
                                     <p>
                                         <span class="value lightGreen" id="routerLinked">0</span>
-                                        <span class="sdn-title">已连通链路<span>Connected Link</span></span>
+                                        <span class="sdn-title">已连通链路</span>
                                     </p>
                                 </div>
                                 <div class="col-xs-6">
                                     <p>
                                         <span class="value lightBlue" id="routerRate">0%</span>
-                                        <span class="sdn-title">正常率<span>Normal Rate</span></span>
+                                        <span class="sdn-title">正常率</span>
                                     </p>
                                     <p>
                                         <span class="value blue" id="routerCount">0</span>
-                                        <span class="sdn-title">总数量<span>Total</span></span>
+                                        <span class="sdn-title">总数量</span>
                                     </p>
                                 </div>
                             </div>
@@ -96,21 +101,21 @@
                                 <div class="col-xs-6">
                                     <p>
                                         <span class="value yellow" id="fpUnlinked">0</span>
-                                        <span class="sdn-title">未连通链路<span>Unconnected Link</span></span>
+                                        <span class="sdn-title">未连通链路</span>
                                     </p>
                                     <p>
                                         <span class="value lightGreen" id="fpLinked">0</span>
-                                        <span class="sdn-title">已连通链路<span>Connected Link</span></span>
+                                        <span class="sdn-title">已连通链路</span>
                                     </p>
                                 </div>
                                 <div class="col-xs-6">
                                     <p>
                                         <span class="value lightBlue" id="fpRate">0%</span>
-                                        <span class="sdn-title">正常率<span>Normal Rate</span></span>
+                                        <span class="sdn-title">正常率</span>
                                     </p>
                                     <p>
                                         <span class="value blue" id="fpCount">0</span>
-                                        <span class="sdn-title">总数量<span>Total</span></span>
+                                        <span class="sdn-title">总数量</span>
                                     </p>
                                 </div>
                             </div>
@@ -120,7 +125,7 @@
                 <div class="topo-content">
                     <div>
                         <div class="topo-container">
-                            <div class="topo" id="topo"></div>
+                            <div id="topo"></div>
                         </div>
                     </div>
                 </div>
@@ -133,7 +138,7 @@
         </div>
     </div>
     <script>
-    mxBasePath = "static/third/mxgraph";
+        mxBasePath = "static/third/mxgraph";
     </script>
     <script src="static/third/mxgraph/js/mxClient.min.js"></script>
     <script src="js/topo.js"></script>

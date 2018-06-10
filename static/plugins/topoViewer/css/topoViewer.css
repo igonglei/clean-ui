@@ -1,4 +1,4 @@
-.topoViewer div.mxTooltip {
+.topoViewer-body div.mxTooltip {
   filter: none;
   border: none;
   font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
@@ -57,6 +57,7 @@
 .topo-left > .item p {
   text-align: center;
   font-size: 16px;
+  margin: 15px 0;
 }
 .topo-left > .item span {
   display: block;
@@ -93,7 +94,7 @@
   padding: 15px 0;
 }
 .topo-left > .item .info > div {
-  height: 185px;
+  height: 180px;
 }
 .topo-left > .item .info > div:first-child {
   border-right: 1px solid #001245;
@@ -123,7 +124,7 @@
   position: relative;
   height: 100%;
 }
-.topo-content .topo-container > .topo {
+.topo-content .topo-container > .topoViewer {
   height: 100%;
   z-index: 900;
   overflow-x: auto;

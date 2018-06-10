@@ -48,8 +48,7 @@ const allJs = {
         `${userJsDir}plugins.js`
     ],
     map: [...commonJs, `${userJsDir}map.js`],
-    topo: [...commonJs, `${pluginDir}loader/js/loader.min.js`,
-        `${pluginDir}topoViewer/js/topoViewer.min.js`,
+    topo: [...commonJs, `${pluginDir}topoViewer/js/topoViewer.min.js`,
         `${userJsDir}topo.js`
     ]
 }
@@ -74,9 +73,7 @@ const allCss = {
         `${userCssDir}plugins.css`
     ],
     map: [...commonCss, `${userCssDir}map.css`],
-    topo: [...commonCss, `${pluginDir}loader/css/loader.min.css`,
-        `${pluginDir}topoViewer/css/topoViewer.min.css`,
-    ],
+    topo: [...commonCss, `${pluginDir}topoViewer/css/topoViewer.min.css`],
 }
 const allHtml = {
     index: `${userPageDir}index.html`,

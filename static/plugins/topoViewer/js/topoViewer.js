@@ -136,15 +136,12 @@
                 // 巡检状态
                 inspectStatus: [{
                     cname: "致命",
-                    ename: "Fatal",
                     cls: "fatal"
                 }, {
                     cname: "严重",
-                    ename: "Serious",
                     cls: "serious"
                 }, {
                     cname: "一般",
-                    ename: "Commonly",
                     cls: "commonly"
                 }],
                 // 巡检级别
@@ -161,7 +158,8 @@
             },
             // 初始化
             init: function(instance) {
-                $(document.body).addClass(this.name);
+                $(document.body).addClass(this.name + "-body");
+                instance.$el.addClass(this.name);
                 this.initGraph(instance);
             },
             // 初始化画布
@@ -264,7 +262,7 @@
                     levels = this.props.inspectLevel;
                 $.each(status, function(i, v) {
                     v.level = levels[v.cls];
-                    $le.append(utils.template('<div class="status {cls}" data-level="{level}"><span class="text">{cname}/{ename}</span><span class="value">0</span></div>', v));
+                    $le.append(utils.template('<div class="status {cls}" data-level="{level}"><span class="text">{cname}</span><span class="value">0</span></div>', v));
                 });
             },
             // 增加设备样式
@@ -324,7 +322,6 @@
             draw: function(instance) {
                 var self = this,
                     retry = 1;
-                instance.$el.showLoader();
                 var request = function(method) {
                     $.ajax({
                         method: method || "GET",
@@ -338,9 +335,6 @@
                             instance.sourceData.devices = devices;
                             instance.sourceData.links = data.links || [];
                             self.resize(instance);
-                        },
-                        complete: function() {
-                            instance.$el.hideLoader();
                         },
                         error: function(err) {
                             if (err.status === 405) {
