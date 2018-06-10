@@ -253,6 +253,7 @@ function EPlug() {
             Me.Property.EnxId = enxId;
             this.GetEnxContentByID(enxId);
         }
+        $(document.body).addClass("envEditor");
         Me.SetData([]);
         this.OptionParam = $.extend(this.OptionParam, option);
         this.loadLocalEnx("eca27c53-9fcb-e35a-5405-c75fe9325a15");

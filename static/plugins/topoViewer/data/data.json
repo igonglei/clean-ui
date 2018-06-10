@@ -1,0 +1,395 @@
+﻿{
+  "devices": [
+    {
+      "x": "center",
+      "y": 100,
+      "margin": 200,
+      "style": "snc",
+      "width": 40,
+      "height": 40,
+      "cells": [
+        {
+          "ID": "63b324915ed64d4d899745a2ba09cb17",
+          "Name": "BJ-SNC-Controller",
+          "Category": "Server",
+          "IP": "189.35.10.100/16"
+        },
+        {
+          "ID": "fd3ad59dfb0547b4af362e5fce4f7224",
+          "Name": "LF-Controller-L1-C12",
+          "Category": "Server",
+          "IP": "8.32.119.230"
+        }
+      ]
+    },
+    {
+      "x": "center",
+      "y": 250,
+      "margin": 300,
+      "style": "router",
+      "width": 35,
+      "height": 35,
+      "cells": [
+        {
+          "ID": "0f0ad38f9755449bb27f50a16f93ba31",
+          "Name": "BJ_hexin_router",
+          "Category": "Router",
+          "IP": "189.35.82.255/16"
+        },
+        {
+          "ID": "136570f953ca40d7ad766218bf4a0f28",
+          "Name": "LF_hexin_router",
+          "Category": "Router",
+          "IP": "8.32.119.255"
+        }
+      ]
+    },
+    {
+      "x": "center",
+      "y": 400,
+      "margin": 180,
+      "style": "cloud",
+      "width": 100,
+      "height": 100,
+      "offset": 40,
+      "cellStyle": "router",
+      "cellWidth": 25,
+      "cellHeight": 25,
+      "cellX": 35,
+      "cellY": 35,
+      "cellMargin": 50,
+      "cellColumn": 2,
+      "group": true,
+      "collapse": true,
+      "arrange": "grid",
+      "cells": [
+        {
+          "collapse": false,
+          "label": "武汉",
+          "cells": [
+            {
+              "ID": "f193d6f0919844c1a09584d1b3e495f2",
+              "Name": "Router-WH-A07-F4-01",
+              "Category": "Router",
+              "IP": "129.9.197.141/16"
+            }
+          ]
+        },
+        {
+          "label": "东莞",
+          "cells": [
+            {
+              "ID": "7c6a9f413ef848ca90e4b3c8a19e94ad",
+              "Name": "Router-SSH-C12-2-F02-1",
+              "Category": "Router",
+              "IP": "130.1.11.2"
+            }
+          ]
+        },
+        {
+          "label": "成都",
+          "cells": [
+            {
+              "ID": "6c658920476d45438806d54f31984e15",
+              "Name": "Router-CD-U5-1-B15-1",
+              "Category": "Router",
+              "IP": "129.9.10.100/16"
+            }
+          ]
+        },
+        {
+          "width": 150,
+          "height": 150,
+          "label": "南京",
+          "cells": [
+            {
+              "ID": "82f33d9d0ca34275aab2c98a1a3db4f3",
+              "Name": "Router-NJ-N11-3F-LAB110",
+              "Category": "Router",
+              "IP": "10.136.51.207"
+            },
+            {
+              "ID": "5ae5e37409ef424183cfdff79eeeeb04",
+              "Name": "Router-NJ-3F-LAB51",
+              "Category": "Router",
+              "IP": "10.137.132.100/23"
+            },
+            {
+              "ID": "8498231653314834898d4f8318724919",
+              "Name": "Router-NJ-N8-2-LAB44-01",
+              "Category": "Router",
+              "IP": "10.137.148.161"
+            },
+            {
+              "ID": "0124bfa752bb495eb0e9fb665139144a",
+              "Name": "Router-NJ-UPARK-B2-01",
+              "Category": "Router",
+              "IP": "10.136.137.217/23"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "x": "center",
+      "y": 580,
+      "margin": 200,
+      "style": "circle",
+      "width": 100,
+      "height": 100,
+      "offset": 35,
+      "cellStyle": "fp",
+      "cellWidth": 25,
+      "cellHeight": 25,
+      "group": true,
+      "arrange": "circle",
+      "cells": [
+        {
+          "style": "rectangle",
+          "arrange": "custom",
+          "cells": [
+            {
+              "ID": "3ffa0ddbe62844f1943287ef2a01cadd",
+              "Name": "FP-WH-A07-F4-01",
+              "Category": "Switch",
+              "IP": "129.9.197.142/16",
+              "x": 40,
+              "y": 40
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "ID": "2517c6438bbb4fe4bfb0239b68e99f69",
+              "Name": "FP-SSH-C12-2-F02-1",
+              "Category": "Switch",
+              "IP": "130.1.11.3"
+            }
+          ]
+        },
+        {
+          "cells": [
+            {
+              "ID": "f8b00d7742cb4dafad3d84bf622ab21c",
+              "Name": "FP-CD-U5-1-B15-1",
+              "Category": "Switch",
+              "IP": "129.9.10.101/16"
+            }
+          ]
+        },
+        {
+          "width": 140,
+          "cells": [
+            {
+              "ID": "4eb9b585a17b4febadd3ba0b0ed871cc",
+              "Name": "FP-NJ-N9-3F-LAB56-02",
+              "Category": "Switch",
+              "IP": "10.137.159.80/23"
+            },
+            {
+              "ID": "68e8e8c277544566a167c7430d5f03e9",
+              "Name": "FP-NJ-N11-3F-LAB110-1",
+              "Category": "Switch",
+              "IP": "192.2.245.61"
+            },
+            {
+              "ID": "fc91387e9b3845a5b874a29da4c5808c",
+              "Name": "FP-NJ-N8-2-LAB44-01",
+              "Category": "Switch",
+              "IP": "10.137.148.160"
+            },
+            {
+              "ID": "516a37e5cec34240b309b0854eff6418",
+              "Name": "FP-NJ-3F-LAB53-01",
+              "Category": "Switch",
+              "IP": "10.137.156.25/23"
+            },
+            {
+              "ID": "e5a755763fe74df0b77808c26fa735e4",
+              "Name": "FP-NJ-N8-3F-LAB54-01",
+              "Category": "Switch",
+              "IP": "10.137.130.130"
+            },
+            {
+              "ID": "eff57041d33d4672a153629c96d85c35",
+              "Name": "FP-NJ-UPARK-B2-01",
+              "Category": "Switch",
+              "IP": "10.136.116.11/23"
+            },
+            {
+              "ID": "f0ca8c75c10146d5913cc06d085b3a9e",
+              "Name": "FP-NJ-N9-3F-LAB58-01",
+              "Category": "Switch",
+              "IP": "10.137.144.251"
+            },
+            {
+              "ID": "73619846faba40e3b817f38fe3de9e82",
+              "Name": "FP-NJ-UPARK-B3-01",
+              "Category": "Switch",
+              "IP": "10.136.120.186/23"
+            },
+            {
+              "ID": "4a488c9ba1144042b6e3a6212440ad34",
+              "Name": "FP-NJ-N4-2F-B19R-01",
+              "Category": "Switch",
+              "IP": "10.137.64.140"
+            },
+            {
+              "ID": "005f61d9761b4c63805271fab14137b6",
+              "Name": "FP-NJ-N9-3-A07-1",
+              "Category": "Switch",
+              "IP": "10.137.147.194",
+              "style": "fp_error",
+              "inspectResult": [
+                {
+                  "level": 0,
+                  "name": "登录",
+                  "msg": "登录失败"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "DeviceRootID": "63b324915ed64d4d899745a2ba09cb17",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "63b324915ed64d4d899745a2ba09cb17",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "fd3ad59dfb0547b4af362e5fce4f7224",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "fd3ad59dfb0547b4af362e5fce4f7224",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "f193d6f0919844c1a09584d1b3e495f2",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "f193d6f0919844c1a09584d1b3e495f2",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "7c6a9f413ef848ca90e4b3c8a19e94ad",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "7c6a9f413ef848ca90e4b3c8a19e94ad",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "6c658920476d45438806d54f31984e15",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "6c658920476d45438806d54f31984e15",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "82f33d9d0ca34275aab2c98a1a3db4f3",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "82f33d9d0ca34275aab2c98a1a3db4f3",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "5ae5e37409ef424183cfdff79eeeeb04",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "5ae5e37409ef424183cfdff79eeeeb04",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "8498231653314834898d4f8318724919",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "8498231653314834898d4f8318724919",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "0124bfa752bb495eb0e9fb665139144a",
+      "PeerDeviceRootID": "0f0ad38f9755449bb27f50a16f93ba31"
+    },
+    {
+      "DeviceRootID": "0124bfa752bb495eb0e9fb665139144a",
+      "PeerDeviceRootID": "136570f953ca40d7ad766218bf4a0f28"
+    },
+    {
+      "DeviceRootID": "f193d6f0919844c1a09584d1b3e495f2",
+      "PeerDeviceRootID": "3ffa0ddbe62844f1943287ef2a01cadd"
+    },
+    {
+      "DeviceRootID": "7c6a9f413ef848ca90e4b3c8a19e94ad",
+      "PeerDeviceRootID": "2517c6438bbb4fe4bfb0239b68e99f69"
+    },
+    {
+      "DeviceRootID": "6c658920476d45438806d54f31984e15",
+      "PeerDeviceRootID": "f8b00d7742cb4dafad3d84bf622ab21c"
+    },
+    {
+      "DeviceRootID": "4eb9b585a17b4febadd3ba0b0ed871cc",
+      "PeerDeviceRootID": "82f33d9d0ca34275aab2c98a1a3db4f3"
+    },
+    {
+      "DeviceRootID": "68e8e8c277544566a167c7430d5f03e9",
+      "PeerDeviceRootID": "82f33d9d0ca34275aab2c98a1a3db4f3"
+    },
+    {
+      "DeviceRootID": "fc91387e9b3845a5b874a29da4c5808c",
+      "PeerDeviceRootID": "82f33d9d0ca34275aab2c98a1a3db4f3"
+    },
+    {
+      "DeviceRootID": "516a37e5cec34240b309b0854eff6418",
+      "PeerDeviceRootID": "5ae5e37409ef424183cfdff79eeeeb04"
+    },
+    {
+      "DeviceRootID": "e5a755763fe74df0b77808c26fa735e4",
+      "PeerDeviceRootID": "5ae5e37409ef424183cfdff79eeeeb04"
+    },
+    {
+      "DeviceRootID": "eff57041d33d4672a153629c96d85c35",
+      "PeerDeviceRootID": "5ae5e37409ef424183cfdff79eeeeb04"
+    },
+    {
+      "DeviceRootID": "f0ca8c75c10146d5913cc06d085b3a9e",
+      "PeerDeviceRootID": "8498231653314834898d4f8318724919"
+    },
+    {
+      "DeviceRootID": "73619846faba40e3b817f38fe3de9e82",
+      "PeerDeviceRootID": "8498231653314834898d4f8318724919"
+    },
+    {
+      "DeviceRootID": "4a488c9ba1144042b6e3a6212440ad34",
+      "PeerDeviceRootID": "0124bfa752bb495eb0e9fb665139144a"
+    },
+    {
+      "DeviceRootID": "005f61d9761b4c63805271fab14137b6",
+      "PeerDeviceRootID": "0124bfa752bb495eb0e9fb665139144a",
+      "style": "link_error",
+      "inspectResult": [
+        {
+          "level": 0,
+          "name": "登录",
+          "msg": "登录失败"
+        }
+      ]
+    }
+  ]
+}
