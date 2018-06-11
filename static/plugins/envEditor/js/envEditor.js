@@ -25,16 +25,15 @@
             imageDir: "images/",
             // 本地数据目录
             dataDir: "data/",
-            // 本地数据
-            data: null
+            // enx文件名
+            enxId: null
         }, // 辅助方法
         plugin = {
             // 插件名称
             name: "envEditor"
         };
     //环境编辑器测试
-    var EnvEditor = function() {
-        var self = this;
+    var envEditor = function(option) {
         //插件对象
         this.PlugObj = {};
         //编辑器初始化
@@ -126,38 +125,11 @@
             $('[data-toggle="tooltip"]').tooltip();
             // right panel toggle
             $(".EplugGraphRightToggle").on("click", function() {
-                self.toggleRightContainer($(this).hasClass("left"));
+                plugObj.toggleRightContainer($(this).hasClass("left"));
             });
         };
-        this.toggleRightContainer = function(state) {
-            var $to = $(".EplugGraphRightToggle"),
-                $rp = $(".EplugGraphEditorResource"),
-                $co = $(".EplugGraphEditorRightContainer"),
-                $tn = $(".EplugGraphEditorRightTop"),
-                rpWidth = 560,
-                toWidth = $to.outerWidth(),
-                diff = rpWidth - toWidth,
-                leftCls = "left",
-                isClosed = $to.hasClass(leftCls),
-                toggle = function(width, func, title, exp, display) {
-                    $co.css({
-                        "padding-right": exp + diff
-                    });
-                    $rp.css("width", width);
-                    $tn.css("display", display);
-                    $to[func](leftCls).attr("title", title);
-                };
-            if (state) {
-                if (isClosed) {
-                    toggle(rpWidth, "removeClass", "Close", "+=", "block");
-                }
-            } else {
-                if (!isClosed) {
-                    toggle(toWidth, "addClass", "Open", "-=", "none");
-                }
-            }
-        };
-    }();
+        this.Init(option);
+    };
 
     //插件
     function EPlug() {
@@ -273,20 +245,49 @@
                 Me.Property.EnxId = enxId;
                 this.GetEnxContentByID(enxId);
             }
-            $(document.body).addClass("envEditor");
+            $(document.body).addClass(plugin.name);
+            this.OptionParam = $.extend({}, defaults, option);
             Me.SetData([]);
-            this.OptionParam = $.extend(this.OptionParam, option);
-            this.loadLocalEnx("eca27c53-9fcb-e35a-5405-c75fe9325a15");
+            this.loadLocalEnx();
         };
         //加载本地enx文件
-        this.loadLocalEnx = function(enxId) {
+        this.loadLocalEnx = function() {
             var $content = $(".EplugGraphEditorRightContainer");
+            var opts = this.OptionParam;
             $content.showLoader();
-            $.get(dataPath + enxId + ".enx", function(data) {
+            $.get(opts.root + opts.dataDir + opts.enxId + ".enx", function(data) {
                 Me.SetData(EnxHelper.EnxToLstJson(data));
             }).always(function() {
                 $content.hideLoader();
             });
+        };
+        this.toggleRightContainer = function(state) {
+            var $to = $(".EplugGraphRightToggle"),
+                $rp = $(".EplugGraphEditorResource"),
+                $co = $(".EplugGraphEditorRightContainer"),
+                $tn = $(".EplugGraphEditorRightTop"),
+                rpWidth = 560,
+                toWidth = $to.outerWidth(),
+                diff = rpWidth - toWidth,
+                leftCls = "left",
+                isClosed = $to.hasClass(leftCls),
+                toggle = function(width, func, title, exp, display) {
+                    $co.css({
+                        "padding-right": exp + diff
+                    });
+                    $rp.css("width", width);
+                    $tn.css("display", display);
+                    $to[func](leftCls).attr("title", title);
+                };
+            if (state) {
+                if (isClosed) {
+                    toggle(rpWidth, "removeClass", "Close", "+=", "block");
+                }
+            } else {
+                if (!isClosed) {
+                    toggle(toWidth, "addClass", "Open", "-=", "none");
+                }
+            }
         };
         //根据组网ID获取组网内容。区分webservices和restful两种接口
         this.GetEnxContentByID = function(enxId) {
@@ -1340,7 +1341,7 @@
                 mxGraphHandler.prototype.guidesEnabled = true;
                 mxGraph.prototype.expandedImage = null;
                 mxGraph.prototype.collapsedImage = null;
-                mxConnectionHandler.prototype.connectImage = new mxImage(imgPath + "arrow.png", 20, 20);
+                mxConnectionHandler.prototype.connectImage = new mxImage(thisObj.GetImagePath("arrow.png"), 20, 20);
                 this.Graph.htmlLabels = true;
                 this.Graph.getLabel = function(cell) {
                     var label = this.labelsVisible ? this.convertValueToString(cell) : "";
@@ -2235,46 +2236,51 @@
                 return tempGraphNode;
             };
         }();
+        //获取图片路径
+        this.GetImagePath = function(name) {
+            var opts = edit.OptionParam;
+            return opts.root + opts.imageDir + name;
+        };
         //设置样式
         this.ConfigureStylesheet = function() {
             //网元样式
             var neStyle = {};
             neStyle[mxConstants.STYLE_SHAPE] = mxConstants.SHAPE_IMAGE;
-            neStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-ne.png";
+            neStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-ne.png");
             neStyle[mxConstants.STYLE_VERTICAL_ALIGN] = mxConstants.ALIGN_TOP;
             neStyle[mxConstants.STYLE_VERTICAL_LABEL_POSITION] = mxConstants.ALIGN_BOTTOM;
             neStyle[mxConstants.STYLE_FONTCOLOR] = "#333";
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Ne, neStyle);
             //测试仪样式
             var testerStyle = $.extend({}, neStyle);
-            testerStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-tester.png";
+            testerStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-tester.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Tester, testerStyle);
             var devStyle = $.extend({}, neStyle);
-            devStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-tester.png";
+            devStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-tester.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Dev, devStyle);
             //ATM样式
             var atmStyle = $.extend({}, neStyle);
-            atmStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-atm.png";
+            atmStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-atm.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Atm, atmStyle);
             //ETH样式
             var ethStyle = $.extend({}, neStyle);
-            ethStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-eth.png";
+            ethStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-eth.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Eth, ethStyle);
             //SDH样式
             var sdhStyle = $.extend({}, neStyle);
-            sdhStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-sdh.png";
+            sdhStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-sdh.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Sdh, sdhStyle);
             //Sftp样式
             var sftpStyle = $.extend({}, neStyle);
-            sftpStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-sftp.png";
+            sftpStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-sftp.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Sftp, sftpStyle);
             //Agent样式
             var computerStyle = $.extend({}, neStyle);
-            computerStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-agent.png";
+            computerStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-agent.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Agent, computerStyle);
             //Network样式
             var networkStyle = $.extend({}, neStyle);
-            networkStyle[mxConstants.STYLE_IMAGE] = imgPath + "v-network.png";
+            networkStyle[mxConstants.STYLE_IMAGE] = this.GetImagePath("v-network.png");
             this.Property.CoreGraph.getStylesheet().putCellStyle(EnxHelper.ModelType.Network, networkStyle);
             //连线样式
             var lineStyle = {};
@@ -2474,7 +2480,7 @@
             function mxIconSet(state) {
                 this.images = [];
                 var graph = state.view.graph;
-                var img = mxUtils.createImage(imgPath + "edit.png");
+                var img = mxUtils.createImage(thisObj.GetImagePath("edit.png"));
                 img.setAttribute("title", "Edit");
                 img.style.position = "absolute";
                 img.style.cursor = "pointer";
@@ -2648,7 +2654,7 @@
             thisObj.EditType = thisObj.ConstInfo.EnumEditType.Topo;
             thisObj.SelectItemHandle();
             var cell = evt.getProperty("cell");
-            EnvEditor.toggleRightContainer(cell);
+            edit.toggleRightContainer(cell);
             thisObj.PropertyPanel.Hide();
             thisObj.SubGraph.EditCell(cell);
         };
@@ -3252,8 +3258,5 @@
         //执行初始化
         this.Init();
     };
+    return envEditor;
 });
-
-var plugPath = "static/plugins/envEditor/",
-    imgPath = plugPath + "images/",
-    dataPath = plugPath + "data/";

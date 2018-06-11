@@ -12,5 +12,7 @@ PAGEHEIGHT = 1050;
 
 //初始化
 $(function() {
-    var plugObj = EnvEditor.Init();
+    new envEditor({
+        enxId: "eca27c53-9fcb-e35a-5405-c75fe9325a15"
+    });
 });

@@ -33,7 +33,8 @@ const allJs = {
         `${userJsDir}screenshots.js`
     ],
     editor: [...commonJs, `${thirdDir}toastr/toastr.min.js`,
-        `${pluginDir}loader/js/loader.min.js`
+        `${pluginDir}loader/js/loader.min.js`,
+        `${userJsDir}editor.js`
     ],
     envEditor: [`${pluginDir}envEditor/js/enxHelper.min.js`,
         `${pluginDir}envEditor/js/envEditor.min.js`
