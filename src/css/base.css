@@ -79,8 +79,8 @@ body {
   will-change: transform;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
 }
 .header > .header-user .user-name {
   font-size: 16px;
@@ -102,8 +102,8 @@ body {
   will-change: transform, opacity;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  -webkit-transition-duration: .3s;
-          transition-duration: .3s;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
   opacity: 0;
   filter: alpha(opacity=0);
 }
