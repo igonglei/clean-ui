@@ -16,6 +16,7 @@ body {
   padding-right: 80px;
 }
 .gradient {
+  background-image: -webkit-gradient(linear, left top, right top, from(#d6cebf), color-stop(60%, #e8dfcc), to(#d6cebf));
   background-image: linear-gradient(to right, #d6cebf, #e8dfcc 60%, #d6cebf);
   /*W3C standard*/
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#d6cebf, endColorstr=#e8dfcc, GradientType='1');
@@ -26,7 +27,6 @@ body {
   color: #fff;
   padding: 15px 0;
   position: relative;
-  overflow: hidden;
   height: 120px;
 }
 .header:before,
@@ -71,11 +71,68 @@ body {
 .header > .header-user .user-icon {
   height: 50px;
   border-radius: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1002;
+  cursor: pointer;
+  will-change: transform;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
 }
 .header > .header-user .user-name {
   font-size: 16px;
   padding: 0 10px;
+}
+.header > .header-user .user-panel {
+  position: absolute;
+  top: 70px;
+  right: 25px;
+  -webkit-transform: translateX(50%) scale(0);
+  transform: translateX(50%) scale(0);
+  width: 180px;
+  height: 180px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  z-index: 1001;
+  will-change: transform, opacity;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.header > .header-user .user-panel::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+  border: 10px solid transparent;
+  border-bottom-color: #fff;
+}
+.header > .header-user:hover .user-panel {
+  -webkit-transform: translateX(50%) scale(1);
+  transform: translateX(50%) scale(1);
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.header > .header-user:hover .user-icon {
+  -webkit-transform: rotate(360deg) scale(1.1);
+  transform: rotate(360deg) scale(1.1);
+}
+.header > .header-user .mp-code {
+  width: 140px;
+  height: 140px;
+  display: block;
+  margin: 20px auto;
 }
 /*header*/
 /*menu*/
@@ -99,6 +156,7 @@ body {
 .nav-top > li > a {
   display: block;
   color: #3a3e55;
+  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .nav-top > li > a:hover,
@@ -134,6 +192,7 @@ body {
   cursor: pointer;
   border-left: transparent 5px solid;
   border-bottom: #ded8cc 1px solid;
+  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .nav-box .item:hover,
@@ -161,8 +220,10 @@ body {
   text-align: center;
   cursor: pointer;
   border-left: transparent 5px solid;
+  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  box-shadow: -1px 0 10px 1px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: -1px 0 10px 1px rgba(255, 255, 255, 0.1);
+          box-shadow: -1px 0 10px 1px rgba(255, 255, 255, 0.1);
 }
 .sub-nav > li:hover,
 .sub-nav > li.selected {
@@ -221,12 +282,14 @@ body {
   height: 100%;
   text-align: center;
   padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 .box {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
 }
 /*body*/
 .fixedBar {
@@ -246,8 +309,10 @@ body {
 .fixedBar > a.top {
   display: none;
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), inset 13px 6px 27px rgba(255, 255, 255, 0.1);
   text-decoration: none;
+  -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
 }
 .fixedBar > a.top:hover {
@@ -262,7 +327,6 @@ body {
 }
 .fade-in {
   -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
   -webkit-animation: fadeIn 0.5s ease-in-out;
   animation: fadeIn 0.5s ease-in-out;
@@ -283,19 +347,18 @@ body {
     opacity: 1;
   }
 }
-/*Scrollbar style*/
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
 ::-webkit-scrollbar-thumb {
   background-color: #727687;
-  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background-color: #666a79;
 }
-::-webkit-scrollbar-track-piece {
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
   background-color: rgba(255, 255, 255, 0);
 }
-/*Scrollbar style*/

@@ -1,0 +1,21 @@
+.envEditor {
+  background-color: #f6f6f6;
+}
+.EplugGraphEditorRightContainer {
+  min-height: 870px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #727687;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666a79;
+}
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
+  background-color: rgba(255, 255, 255, 0);
+}

@@ -282,7 +282,7 @@
     height: @height;
 }
 
-.lh(@height: @full-size) {
+.lh(@height: @line-height) {
     line-height: @height;
 }
 
@@ -370,4 +370,25 @@
 // Word wrap
 .ww(@wrap: @word-wrap) {
     word-wrap: @wrap;
+}
+
+// Scrollbar style
+.scrollbar() {
+    ::-webkit-scrollbar {
+        .size(@scrollbar-width,@scrollbar-width);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        .bgc(@scrollbar-thumb-bg-color);
+        .bra(3px);
+    
+        &:hover {
+            .bgc(darken(@scrollbar-thumb-bg-color,5%));
+        }
+    }
+    
+    ::-webkit-scrollbar-track-piece,
+    ::-webkit-scrollbar-corner {
+        .bgc(fade(#fff,0%));
+    }
 }

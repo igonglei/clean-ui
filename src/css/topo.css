@@ -1,0 +1,28 @@
+.topoViewer-body {
+  padding: 15px;
+  min-width: 1360px;
+  background-color: #001245;
+  background-image: radial-gradient(circle farthest-side, #0074a5 20%, #026392 40%, #001245 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0074a5, endColorstr=#001245, GradientType='1');
+}
+.topo-left {
+  width: 365px;
+}
+.topo-content {
+  padding-left: 380px;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #727687;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666a79;
+}
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
+  background-color: rgba(255, 255, 255, 0);
+}

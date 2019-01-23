@@ -1,58 +1,17 @@
-<!DOCTYPE html>
-<html lang="en-US">
+{{#extend "layout"}}
+    {{#content "head" mode="append"}}
+        <link href="css/lab.css?{{version}}" rel="stylesheet" />
+    {{/content}}
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>空间布局 - CleanUI</title>
-    <link href="static/favicon.ico" rel="icon" type="image/x-icon" />
-    <link href="css/lab.css" rel="stylesheet" />
-    <style type="text/css">
-        .labDesigner {
-            min-width: 1260px;
-        }
-    </style>
-</head>
+    {{#content "body"}}
+        <div id="lab"></div>
+    {{/content}}
 
-<body>
-    <div class="container-fluid gradient">
-        <div class="header">
-            <div class="header-logo">
-                <img class="logo" src="static/images/logo.png" onclick="location.href='index.html'" />
-                <div class="title">
-                    <span>CleanUI</span>
-                </div>
-            </div>
-            <div class="header-nav">
-                <ul class="nav-top" id="nav">
-                </ul>
-            </div>
-            <div class="header-user">
-                <img class="user-icon" src="static/images/icon.jpg" />
-                <span class="user-name">龚磊</span>
-            </div>
-        </div>
-        <div class="content fade-in">
-            <div class="box content-nav">
-                <ul class="nav-box" id="menu">
-                </ul>
-            </div>
-            <div class="box content-body">
-                <div id="lab"></div>
-            </div>
-        </div>
-        <div class="fixedBar">
-            <a title="返回顶部" class="top" href="javascript:void(0)">
-                <i class="icon-arrow-up icon"></i>
-            </a>
-        </div>
-    </div>
-    <script>
-        mxBasePath = "static/third/mxgraph";
-    </script>
-    <script src="static/third/mxgraph/js/mxClient.min.js"></script>
-    <script src="js/lab.js"></script>
-</body>
-
-</html>
+    {{#content "foot"}}
+        <script>
+            mxBasePath = "static/third/mxgraph";
+        </script>
+        <script src="static/third/mxgraph/js/mxClient.min.js"></script>
+        <script src="js/lab.js?{{version}}"></script>
+    {{/content}}
+{{/extend}}

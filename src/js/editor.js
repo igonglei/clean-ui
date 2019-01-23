@@ -5,11 +5,6 @@ if ($.fn.showLoader) {
     });
 }
 
-//菜单名称
-NAVNAME = "Home";
-MENUNAME = "editor";
-PAGEHEIGHT = 1050;
-
 //初始化
 $(function() {
     new envEditor({

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{#block "head"}}
+    <title>{{title}} - CleanUI</title>
+    <link href="static/favicon.ico" rel="icon" type="image/x-icon" />
+    {{/block}}
+</head>
+
+<body>
+    {{#if (content "main")}}
+        <div class="container-fluid gradient">
+            <div class="header">
+                <div class="header-logo">
+                    <img class="logo" src="static/images/logo.png" onclick="location.href='index.html'" />
+                    <div class="title">
+                        <span>CleanUI</span>
+                    </div>
+                </div>
+                <div class="header-nav">
+                    <ul class="nav-top" id="nav">
+                    </ul>
+                </div>
+                <div class="header-user">
+                    <img class="user-icon" src="static/images/icon.jpg" />
+                    <div class="user-panel">
+                        <img class="mp-code" src="https://lg-npha00ki-1257320081.cos.ap-shanghai.myqcloud.com/mp-code.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div class="content fade-in">
+                <div class="box content-nav">
+                    <ul class="nav-box" id="menu">
+                    </ul>
+                </div>
+                <div class="box content-body">
+                    {{#block "main"}}
+                    {{/block}}
+                </div>
+            </div>
+            <div class="fixedBar">
+                <a title="返回顶部" class="top" href="javascript:void(0)">
+                    <i class="icon-arrow-up icon"></i>
+                </a>
+            </div>
+        </div>
+    {{else}}
+        {{#block "body"}}
+        {{/block}}
+    {{/if}}
+    {{#block "foot"}}
+    {{/block}}
+</body>
+
+</html>

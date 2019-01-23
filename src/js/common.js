@@ -91,22 +91,35 @@ var Nav = {
         url: "index.html",
         target: "_self"
     }, {
-        text: "GitHub",
-        value: "GitHub",
-        icon: "social-github",
-        url: "https://github.com/igonglei/clean-ui",
+        text: "设计器",
+        value: "editor",
+        icon: "loop",
+        url: "editor.html",
+        target: "_blank"
+    }, {
+        text: "实验室",
+        value: "lab",
+        icon: "drawer",
+        url: "lab.html",
+        target: "_blank"
+    }, {
+        text: "拓扑",
+        value: "topo",
+        icon: "link",
+        url: "topo.html",
         target: "_blank"
     }, {
         text: "SuperTool",
         value: "SuperTool",
-        icon: "stool.png",
+        icon: "stool.gray.png",
+        iconHover: "stool.white.png",
         iconType: "image",
         url: "https://igonglei.github.io/super-tool/",
         target: "_blank"
     }],
     tpl: '<li class="{cls}"><a href="{url}" target="{target}"><div class="icon">{iconTpl}</div><div class="text">{text}</div></a></li>',
     iconTpl: '<i class="icon-{icon}"></i>',
-    imgTpl: '<img src="static/images/{icon}">',
+    imgTpl: '<img class="icon-img" src="{path}{icon}" data-src="{path}{icon}" data-hover-src="{path}{iconHover}">',
     init: function() {
         var $el = $(this.el),
             data = this.data,
@@ -122,10 +135,20 @@ var Nav = {
             if (v.value === NAVNAME) {
                 v.cls = selectedCls;
             }
+            v.path = 'static/images/';
             var iTpl = v.iconType == "image" ? imgTpl : iconTpl;
             html += tpl.template({ iconTpl: iTpl }).template(v);
         });
         $el.html(html);
+        var changeImg = function (isHover) {
+            var $this = $(this).find('.icon-img');
+            $this.attr('src', $this.attr(isHover ? 'data-hover-src' : 'data-src'));
+        };
+        $el.on('mouseenter', 'li', function () {
+            changeImg.call(this, true);
+        }).on('mouseleave', 'li', function () {
+            changeImg.call(this);
+        });
     }
 };
 
@@ -142,30 +165,15 @@ var Menu = {
             icon: "picture",
             url: "index.html"
         }, {
-            text: "环境设计器",
-            value: "editor",
-            icon: "loop",
-            url: "editor.html"
-        }, {
-            text: "空间布局",
-            value: "lab",
-            icon: "drawer",
-            url: "lab.html"
-        }, {
-            text: "拓扑大网",
-            value: "topo",
-            icon: "link",
-            url: "topo.html"
+            text: "实验室分布",
+            value: "map",
+            icon: "map",
+            url: "map.html"
         }, {
             text: "插件实例",
             value: "plugins",
             icon: "cursor",
             url: "plugins.html"
-        }, {
-            text: "实验室分布",
-            value: "map",
-            icon: "map",
-            url: "map.html"
         }]
     }],
     tpl: {

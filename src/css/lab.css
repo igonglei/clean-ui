@@ -1,0 +1,36 @@
+.lde-body {
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-color: #001245;
+  background-image: radial-gradient(circle farthest-side, #0074a5 20%, #026392 40%, #001245 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#0074a5, endColorstr=#001245, GradientType='1');
+}
+.labDesigner {
+  min-width: 1280px;
+  border-radius: 0;
+}
+.lde-tooltip .devices {
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-align: center;
+}
+.lde-tooltip .devices .name {
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #727687;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666a79;
+}
+::-webkit-scrollbar-track-piece,
+::-webkit-scrollbar-corner {
+  background-color: rgba(255, 255, 255, 0);
+}
