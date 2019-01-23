@@ -48,6 +48,9 @@
 # 安装依赖
 npm install
 
+# 开发模式
+npm run dev
+
 # 编译生成
 npm run build
 ```
