@@ -114,7 +114,7 @@ var Nav = {
         icon: "stool.gray.png",
         iconHover: "stool.white.png",
         iconType: "image",
-        url: "https://igonglei.github.io/super-tool/",
+        url: "/super-tool/",
         target: "_blank"
     }],
     tpl: '<li class="{cls}"><a href="{url}" target="{target}"><div class="icon">{iconTpl}</div><div class="text">{text}</div></a></li>',
