@@ -7,41 +7,51 @@ $(function() {
     Screenshots.init();
 });
 
+var IS_IE = /MSIE/i.test(navigator.userAgent);
+
 //截图对象
 var Screenshots = {
     el: ".screenshots",
     elModal: "#scModal",
-    elModalLabel: "#scModalLabel",
     elImg: "#scImg",
     elSmallImg: ".smallImg",
     elFullscreen: '.fullscreen',
+    elImgTitle: '.scImg-title',
     data: [{
         title: '环境设计器',
-        cover: 'enveditor.cover.png',
-        img: 'enveditor.png'
+        cover: 'wk.enveditor.cover.png',
+        img: 'wk.enveditor.png'
+    }, {
+        title: '实验室布局',
+        cover: 'wk.lab.cover.png',
+        img: 'wk.lab.png'
+    }, {
+        title: '拓扑大网',
+        cover: 'wk.topo.cover.png',
+        img: 'wk.topo.png'
     }, {
         title: '语音天后加冕之战',
-        cover: 'voice-queen.cover.png',
-        img: 'voice-queen.png'
+        cover: 'wk.douyu.voice-queen.cover.png',
+        img: 'wk.douyu.voice-queen.png'
     }, {
         title: '斗鱼极速版激励体系',
-        cover: 'douyu-invite-share.cover.png',
-        img: 'douyu-invite-share.png',
+        cover: 'wk.douyu.invite-share.cover.png',
+        img: 'wk.douyu.invite-share.png',
         mobile: true
     }, {
         title: '斗鱼极速版激励体系',
-        cover: 'douyu-invite-rules.cover.png',
-        img: 'douyu-invite-rules.png',
+        cover: 'wk.douyu.invite-rules.cover.png',
+        img: 'wk.douyu.invite-rules.png',
         mobile: true
     }, {
         title: '斗鱼APP活动页',
-        cover: 'douyu-activity.cover.png',
-        img: 'douyu-activity.png',
+        cover: 'wk.douyu.activity.cover.png',
+        img: 'wk.douyu.activity.png',
         mobile: true
     }, {
-        title: '斗鱼APP绝地求生弹幕引援',
-        cover: 'douyu-pubg-barrage.cover.png',
-        img: 'douyu-pubg-barrage.png',
+        title: '斗鱼PUBG弹幕引援',
+        cover: 'wk.douyu.pubg-barrage.cover.png',
+        img: 'wk.douyu.pubg-barrage.png',
         mobile: true
     }],
     init: function() {
@@ -58,9 +68,15 @@ var Screenshots = {
             $model.modal();
         });
         $('[data-toggle="tooltip"]').tooltip({ container: 'body' });
-        $(this.elFullscreen).on('click', function() {
-            self.enterFullscreen();
-        });
+        var $fullscreen = $(this.elFullscreen);
+        if (IS_IE) {
+            $fullscreen.hide();
+        }
+        else {
+            $fullscreen.on('click', function() {
+                self.enterFullscreen();
+            });
+        }
         this.bindKeyEvents();
         $model.on('shown.bs.modal', function() {
             if (localStorage.getItem('fullscreenTipShown')) {
@@ -71,11 +87,10 @@ var Screenshots = {
         });
     },
     showBigImg: function($img) {
-        var mobileCls = $img.attr('data-mobile') === 'true' ? 'mobile' : '';
-        $(this.elImg).removeClass('mobile').addClass(mobileCls)
-            .attr("src", $img.attr("data-src"))
-            .attr("data-index", $img.attr("data-index"));
-        $(this.elModalLabel).html($img.attr("data-original-title"));
+        var mobileCls = $img.attr('data-mobile') === 'true' ? 'mobile-modal' : '';
+        $(this.elModal).removeClass('mobile-modal').addClass(mobileCls);
+        $(this.elImg).attr("src", $img.attr("data-src")).attr("data-index", $img.attr("data-index"));
+        $(this.elImgTitle).html($img.attr("data-original-title"));
     },
     enterFullscreen: function() {
         var fullscreen = function(el) {
@@ -104,7 +119,7 @@ var Screenshots = {
                 newIndex;
             switch (event.keyCode) {
                 case 13:
-                    self.enterFullscreen();
+                    !IS_IE && self.enterFullscreen();
                     return;
                 case 37:
                     newIndex = Math.max(0, index - 1);
