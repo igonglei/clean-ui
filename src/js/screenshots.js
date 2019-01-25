@@ -8,6 +8,7 @@ $(function() {
 });
 
 var IS_IE = /MSIE/i.test(navigator.userAgent);
+var IS_MOBILE = /(iPad|iPhone|iPod|Android)/i.test(navigator.userAgent);
 
 //截图对象
 var Screenshots = {
@@ -16,6 +17,7 @@ var Screenshots = {
     elImg: "#scImg",
     elSmallImg: ".smallImg",
     elFullscreen: '.fullscreen',
+    elClose: '.close',
     elImgTitle: '.scImg-title',
     data: [{
         title: '环境设计器',
@@ -61,15 +63,14 @@ var Screenshots = {
         $.each(self.data, function(i, v) {
             v.index = i;
             v.cdn = 'https://lg-npha00ki-1257320081.cos.ap-shanghai.myqcloud.com/';
-            $el.append('<div class="col-xs-12 col-sm-3"><img class="smallImg" src="{cdn}{cover}" data-mobile="{mobile}" data-src="{cdn}{img}" title="{title}" data-index="{index}" data-toggle="tooltip" data-placement="top"></div>'.template(v));
+            $el.append('<div class="col-xs-12 col-sm-3"><img class="smallImg" src="{cdn}{cover}" data-mobile="{mobile}" data-src="{cdn}{img}" title="{title}" data-title="{title}" data-index="{index}"></div>'.template(v));
         });
         $el.on("click", "img", function() {
             self.showBigImg($(this));
             $model.modal();
         });
-        $('[data-toggle="tooltip"]').tooltip({ container: 'body' });
         var $fullscreen = $(this.elFullscreen);
-        if (IS_IE) {
+        if (IS_IE || IS_MOBILE) {
             $fullscreen.hide();
         }
         else {
@@ -77,6 +78,10 @@ var Screenshots = {
                 self.enterFullscreen();
             });
         }
+        if (IS_MOBILE) {
+            return;
+        }
+        $(this.elSmallImg + ',' + this.elClose).tooltip({ container: 'body' });
         this.bindKeyEvents();
         $model.on('shown.bs.modal', function() {
             if (localStorage.getItem('fullscreenTipShown')) {
@@ -90,7 +95,7 @@ var Screenshots = {
         var mobileCls = $img.attr('data-mobile') === 'true' ? 'mobile-modal' : '';
         $(this.elModal).removeClass('mobile-modal').addClass(mobileCls);
         $(this.elImg).attr("src", $img.attr("data-src")).attr("data-index", $img.attr("data-index"));
-        $(this.elImgTitle).html($img.attr("data-original-title"));
+        $(this.elImgTitle).html($img.attr("data-title"));
     },
     enterFullscreen: function() {
         var fullscreen = function(el) {

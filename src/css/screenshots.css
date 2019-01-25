@@ -20,6 +20,10 @@
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+.modal-dialog {
+  margin: 30px auto;
+  padding: 0 30px;
+}
 .modal-content {
   background-color: #e7e7e7;
   border-radius: 0;
@@ -94,7 +98,6 @@
   .modal-dialog {
     max-width: 1360px;
     width: auto;
-    padding: 0 30px;
   }
   .mobile-modal .modal-dialog {
     max-width: 450px;
@@ -107,12 +110,12 @@
 }
 @media (max-width: 410px) {
   .scImg-title {
-    font-size: 26px;
+    font-size: 24px;
   }
   .scImg-button .close {
-    font-size: 26px;
+    font-size: 24px;
   }
   .scImg-button .close.fullscreen {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
