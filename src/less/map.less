@@ -13,6 +13,7 @@
 
 .map {
     .size;
+    .minh(720px);
 }
 
 .labBlock {
@@ -68,4 +69,16 @@
 
 .sdelab .mapSum {
     .bgc(rgba(255, 255, 255, 0.3));
+}
+
+@media (max-width: 490px) {
+    .labBlock{
+        .hide;
+    }
+}
+
+@media (min-width: 491px) and (max-width: 670px) {
+    .labBlock{
+        .w(155px);
+    }
 }

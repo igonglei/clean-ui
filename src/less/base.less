@@ -364,3 +364,52 @@ body {
 }
 
 .scrollbar;
+
+@media (max-width: 767px) {
+    body {
+        .minw(auto);
+    }
+
+    .container-fluid {
+        .p(0 30px);
+    }
+
+    .header {
+        .header-nav {
+            .hide;
+        }
+
+        .header-logo {
+            top: 35px;
+
+            .logo {
+                .h(50px);
+                .mr(10px);
+            }
+        }
+
+        .header-user {
+            .user-panel {
+                right: 90px;
+
+                &::before {
+                    left: auto;
+                    right: 0;
+                }
+            }
+        }
+    }
+
+    .content {
+        .content-nav {
+            .hide;
+        }
+
+        .content-body {
+            .ml;
+            .mb(20px);
+            height: auto!important;
+            .minh(760px);
+        }
+    }
+}

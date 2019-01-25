@@ -238,6 +238,8 @@ const buildCss = () => {
 }
 
 const buildAll = () => {
+    const buildMode = isPro ? 'Production' : 'Development'
+    console.log(`${ buildMode } start building...`.green)
     return new Promise((resolve, reject) => {
         init().then(() => {
             Promise.all([buildJs(), buildHtml(), buildCss()]).then(() => {
@@ -245,6 +247,7 @@ const buildAll = () => {
                 fs.copy(staticDir, distDir + staticDir).then(() => {
                     console.log("Copy done.".green)
                     console.log("Build done.".green)
+                    console.log(`${ buildMode } build done.`.green)
                     resolve()
                 }).catch(err => {
                     console.error(`Copy failed, ${err}`.red)

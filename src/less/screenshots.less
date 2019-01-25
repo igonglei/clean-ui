@@ -35,13 +35,6 @@
     }
 }
 
-.mobile-modal {
-    .modal-dialog {
-        .w(400px);
-        .m(10px auto);
-    }
-}
-
 @header-text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 
 .scImg-header {
@@ -103,12 +96,38 @@
 
 @media (min-width: 768px) {
     .modal-dialog {
-        .w(1300px);
+        .maxw(1360px);
+        .w(auto);
+        .p(0 30px);
     }
 
     .mobile-modal {
         .modal-dialog {
-            .m(30px auto);
+            .maxw(450px);
+        }
+    }
+}
+
+@media (min-width: 542px) and (max-width: 767px) {
+    .screenshots {
+        .col-xs-12 {
+            .w(50%);
+        }
+    }
+}
+
+@media (max-width: 410px) {
+    .scImg-title {
+        .fs(26px);
+    }
+
+    .scImg-button {
+        .close {
+            .fs(26px);
+            
+            &.fullscreen {
+                .fs(22px);
+            }
         }
     }
 }

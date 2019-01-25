@@ -362,3 +362,37 @@ body {
 ::-webkit-scrollbar-corner {
   background-color: rgba(255, 255, 255, 0);
 }
+@media (max-width: 767px) {
+  body {
+    min-width: auto;
+  }
+  .container-fluid {
+    padding: 0 30px;
+  }
+  .header .header-nav {
+    display: none;
+  }
+  .header .header-logo {
+    top: 35px;
+  }
+  .header .header-logo .logo {
+    height: 50px;
+    margin-right: 10px;
+  }
+  .header .header-user .user-panel {
+    right: 90px;
+  }
+  .header .header-user .user-panel::before {
+    left: auto;
+    right: 0;
+  }
+  .content .content-nav {
+    display: none;
+  }
+  .content .content-body {
+    margin-left: 0;
+    margin-bottom: 20px;
+    height: auto!important;
+    min-height: 760px;
+  }
+}

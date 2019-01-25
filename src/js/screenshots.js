@@ -49,7 +49,7 @@ var Screenshots = {
         img: 'wk.douyu.activity.png',
         mobile: true
     }, {
-        title: '斗鱼PUBG弹幕引援',
+        title: '斗鱼PUBG弹幕应援',
         cover: 'wk.douyu.pubg-barrage.cover.png',
         img: 'wk.douyu.pubg-barrage.png',
         mobile: true
@@ -61,7 +61,7 @@ var Screenshots = {
         $.each(self.data, function(i, v) {
             v.index = i;
             v.cdn = 'https://lg-npha00ki-1257320081.cos.ap-shanghai.myqcloud.com/';
-            $el.append('<div class="col-xs-3"><img class="smallImg" src="{cdn}{cover}" data-mobile="{mobile}" data-src="{cdn}{img}" title="{title}" data-index="{index}" data-toggle="tooltip" data-placement="top"></div>'.template(v));
+            $el.append('<div class="col-xs-12 col-sm-3"><img class="smallImg" src="{cdn}{cover}" data-mobile="{mobile}" data-src="{cdn}{img}" title="{title}" data-index="{index}" data-toggle="tooltip" data-placement="top"></div>'.template(v));
         });
         $el.on("click", "img", function() {
             self.showBigImg($(this));
