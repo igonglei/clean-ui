@@ -19,6 +19,8 @@ var Screenshots = {
     elFullscreen: '.fullscreen',
     elClose: '.close',
     elImgTitle: '.scImg-title',
+    elArrowLeft: '.arrow-left',
+    elArrowRight: '.arrow-right',
     data: [{
         title: '环境设计器',
         cover: 'wk.enveditor.cover.png',
@@ -69,19 +71,12 @@ var Screenshots = {
             self.showBigImg($(this));
             $model.modal();
         });
-        var $fullscreen = $(this.elFullscreen);
-        if (IS_IE || IS_MOBILE) {
-            $fullscreen.hide();
-        }
-        else {
-            $fullscreen.on('click', function() {
-                self.enterFullscreen();
-            });
-        }
+        this.bindArrowEvents();
+        this.bindFullscreenEvent();
         if (IS_MOBILE) {
+            this.bindTouchEvent();
             return;
         }
-        $(this.elSmallImg + ',' + this.elClose).tooltip({ container: 'body' });
         this.bindKeyEvents();
         $model.on('shown.bs.modal', function() {
             if (localStorage.getItem('fullscreenTipShown')) {
@@ -90,6 +85,7 @@ var Screenshots = {
             localStorage.setItem('fullscreenTipShown', true);
             toastr.info('左右方向键切换图片');
         });
+        $(this.elSmallImg + ',' + this.elClose + ',' + this.elArrowLeft + ',' + this.elArrowRight).tooltip({ container: 'body' });
     },
     showBigImg: function($img) {
         var mobileCls = $img.attr('data-mobile') === 'true' ? 'mobile-modal' : '';
@@ -109,38 +105,78 @@ var Screenshots = {
         };
         fullscreen($(this.elImg)[0]);
     },
+    switchImg: function ($scImg, $smImg, isRight) {
+        var index = parseInt($scImg.attr('data-index'));
+        var newIndex = isRight ? Math.min($smImg.length - 1, index + 1) : Math.max(0, index - 1);
+        if (newIndex == index) {
+            return;
+        }
+        var $img = $smImg.eq(newIndex);
+        if ($img.length == 0) {
+            return;
+        }
+        this.showBigImg($img);
+    },
+    bindFullscreenEvent: function () {
+        var $fullscreen = $(this.elFullscreen);
+        if (IS_IE || IS_MOBILE) {
+            $fullscreen.hide();
+        }
+        else {
+            $fullscreen.on('click', function() {
+                self.enterFullscreen();
+            });
+        }
+    },
     bindKeyEvents: function() {
         var self = this,
             $scImg = $(self.elImg),
-            $smImg = $(self.elSmallImg),
-            total = $smImg.length;
+            $smImg = $(self.elSmallImg);
         $(document).on('keydown', function(event) {
             event.preventDefault();
             var isShow = $scImg.is(':visible');
             if (!isShow) {
                 return;
             }
-            var index = parseInt($scImg.attr('data-index')),
-                newIndex;
             switch (event.keyCode) {
                 case 13:
                     !IS_IE && self.enterFullscreen();
                     return;
                 case 37:
-                    newIndex = Math.max(0, index - 1);
+                    self.switchImg($scImg, $smImg);
                     break;
                 case 39:
-                    newIndex = Math.min(total - 1, index + 1);
+                    self.switchImg($scImg, $smImg, true);
                     break;
             }
-            if (newIndex == index) {
-                return;
+        });
+    },
+    bindArrowEvents: function () {
+        var $scImg = $(this.elImg),
+            $smImg = $(this.elSmallImg),
+            self = this;
+        $(this.elArrowLeft).on('click', function () {
+            self.switchImg($scImg, $smImg);
+        });
+        $(this.elArrowRight).on('click', function () {
+            self.switchImg($scImg, $smImg, true);
+        });
+    },
+    bindTouchEvent: function () {
+        var startX,
+            endX,
+            $scImg = $(this.elImg),
+            $smImg = $(this.elSmallImg),
+            self = this;
+        $scImg.on('touchstart', function (e) {
+            e.preventDefault();
+            startX = e.originalEvent.targetTouches[0].pageX;
+        }).on('touchend', function (e) {
+            e.preventDefault();
+            endX = e.originalEvent.changedTouches[0].pageX;
+            if (Math.abs(endX - startX) > 30) {
+                self.switchImg($scImg, $smImg, startX - endX > 30);
             }
-            var $img = $smImg.eq(newIndex);
-            if ($img.length == 0) {
-                return;
-            }
-            self.showBigImg($img);
         });
     }
 };

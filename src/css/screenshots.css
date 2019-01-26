@@ -32,7 +32,9 @@
 .modal-body {
   padding: 0;
 }
-.modal-body:hover .scImg-header {
+.modal-body:hover .scImg-header,
+.modal-body:hover .arrow-left,
+.modal-body:hover .arrow-right {
   opacity: 1;
   filter: alpha(opacity=100);
 }
@@ -93,6 +95,41 @@
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
+}
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  cursor: pointer;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  will-change: opacity;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+.arrow-left:hover,
+.arrow-right:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.arrow-left > i,
+.arrow-right > i {
+  display: inline-block;
+  font-size: 24px;
+  margin: 8px 0;
+}
+.arrow-right {
+  left: auto;
+  right: 10px;
 }
 @media (min-width: 768px) {
   .modal-dialog {

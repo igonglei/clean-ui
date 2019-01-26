@@ -34,7 +34,8 @@
     .p;
 
     &:hover {
-        .scImg-header {
+        .scImg-header,
+        .arrow-left {
             .opacity(1);
         }
     }
@@ -97,6 +98,37 @@
     .maxw;
     .maxh;
     .m(0 auto);
+}
+
+.arrow-left {
+    .poa;
+    .pos-tl(50%,10px);
+    .bgc(fade(#000,30%));
+    .cl(#fff);
+    .bra(50%);
+    .size(40px,40px);
+    .tc;
+    .transform(translateY(-50%));
+    .cursor;
+    .opacity(0);
+    will-change: opacity;
+    .transition;
+    text-shadow: @header-text-shadow;
+
+    &:hover {
+        .bgc(fade(#000,50%));
+    }
+
+    >i {
+        .show(true);
+        .fs(24px);
+        .m(8px 0);
+    }
+}
+
+.arrow-right:extend(.arrow-left all) {
+    left: auto;
+    right: 10px;
 }
 
 @media (min-width: 768px) {
