@@ -72,11 +72,11 @@ var Screenshots = {
             $model.modal();
         });
         this.bindArrowEvents();
-        this.bindFullscreenEvent();
         if (IS_MOBILE) {
             this.bindTouchEvent();
             return;
         }
+        this.bindFullscreenEvent();
         this.bindKeyEvents();
         $model.on('shown.bs.modal', function() {
             if (localStorage.getItem('fullscreenTipShown')) {
@@ -118,15 +118,13 @@ var Screenshots = {
         this.showBigImg($img);
     },
     bindFullscreenEvent: function () {
-        var $fullscreen = $(this.elFullscreen);
-        if (IS_IE || IS_MOBILE) {
-            $fullscreen.hide();
+        if (IS_IE) {
+            return;
         }
-        else {
-            $fullscreen.on('click', function() {
-                self.enterFullscreen();
-            });
-        }
+        var self = this;
+        $(this.elFullscreen).show().on('click', function() {
+            self.enterFullscreen();
+        });
     },
     bindKeyEvents: function() {
         var self = this,

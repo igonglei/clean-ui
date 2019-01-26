@@ -87,6 +87,7 @@
 .scImg-button .close.fullscreen {
   font-size: 26px;
   margin-right: 10px;
+  display: none;
 }
 .scImg {
   display: block;
