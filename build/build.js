@@ -21,6 +21,7 @@ const userLessDir = `${srcDir}less/`
 const userPageDir = `${srcDir}page/`
 const outputJsDir = `${distDir}js/`
 const outputCssDir = `${distDir}css/`
+const cloud = 'https://lg-npha00ki-1257320081.cos.ap-shanghai.myqcloud.com'
 
 const commonJs = [`${thirdDir}jquery/jquery.min.js`,
     `${thirdDir}bootstrap/js/bootstrap.min.js`,
@@ -36,7 +37,7 @@ const allJs = {
         `${userJsDir}screenshots.js`
     ],
     editor: [`${thirdDir}jquery/jquery.min.js`,
-        `${thirdDir}bootstrap/js/bootstrap.min.js`, 
+        `${thirdDir}bootstrap/js/bootstrap.min.js`,
         `${thirdDir}toastr/toastr.min.js`,
         `${pluginDir}loader/js/loader.min.js`,
         `${userJsDir}editor.js`
@@ -158,10 +159,10 @@ const buildHtml = () => {
     handlebars.registerHelper(layouts(handlebars))
     handlebars.registerPartial('layout', fs.readFileSync(`${userPageDir}layout.html`, 'utf8'))
 
-    const version = new Date().valueOf()    
+    const version = new Date().valueOf()
     const build = (inputHtml, title) => {
         const template = handlebars.compile(fs.readFileSync(inputHtml, 'utf8'))
-        const outputHtml = template({ title, version })
+        const outputHtml = template({ title, version, cloud })
         return outputHtml
     }
 
@@ -195,7 +196,7 @@ const buildHtml = () => {
 
 const buildCss = () => {
     const autoprefixPlugin = new lessPluginAutoPrefix()
-    
+
     const build = (inputLess, outputCss) => {
         return less.render(fs.readFileSync(inputLess, "utf8"), { filename: path.resolve(inputLess), plugins: [autoprefixPlugin] }).then(output => {
             fs.writeFileSync(outputCss, output.css, "utf8")

@@ -40,7 +40,7 @@ body {
     >.header-logo {
         @logo-height: 60px;
         .poa;
-        .pos-tl((@header-height - @logo-height)/2);
+        .pos-tl(((@header-height - @logo-height) / 2));
 
         >img, div {
             .show(true);
@@ -65,7 +65,7 @@ body {
     >.header-user {
         @icon-height: 50px;
         .poa;
-        .pos-tr((@header-height - @icon-height)/2);
+        .pos-tr(((@header-height - @icon-height) / 2));
 
         >img, span {
             .show(true);
@@ -91,7 +91,7 @@ body {
 
         .user-panel {
             .poa;
-            .pos-tr(70px,@icon-height/2);
+            .pos-tr(70px,(@icon-height / 2));
             .transform(translateX(50%) scale(0));
             .size(180px,180px);
             .bgc;
@@ -113,7 +113,7 @@ body {
                 border-bottom-color: #fff;
             }
         }
-        
+
         &:hover {
             .user-panel {
                 .transform(translateX(50%) scale(1));
@@ -142,7 +142,7 @@ body {
 .nav-top {
     .ls;
     .m;
-    .p((@nav-height - @nav-item-height)/2 0);
+    .p(((@nav-height - @nav-item-height) / 2) 0);
 
     >li {
         .show(true);
@@ -214,7 +214,7 @@ body {
         >.arrow {
             @arrow-size: 20px;
             .poa;
-            .pos-tr((@height - @arrow-size)/2,20px);
+            .pos-tr(((@height - @arrow-size) / 2),20px);
             .fs(@arrow-size);
         }
 
@@ -332,7 +332,7 @@ body {
                 .cl(#fff);
                 .show;
                 .tc;
-                .p((@height - @icon-height)/2 0);
+                .p(((@height - @icon-height) / 2) 0);
             }
         }
     }

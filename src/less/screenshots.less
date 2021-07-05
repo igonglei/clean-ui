@@ -46,10 +46,10 @@
 .scImg-header {
     .poa;
     .pos-tr;
-    .size(100%,50px);
-    .lh(50px);
-    .bgc(fade(#000,30%));
-    .p(0 @padding);
+    .size(100%,40px);
+    .lh(40px);
+    .bgc(fade(#000,40%));
+    .p(0 40px);
     .opacity(0);
     will-change: opacity;
     .transition;
@@ -57,19 +57,20 @@
 
 .scImg-title {
     .cl(#fff);
-    .fs(30px);
+    .fs(24px);
     .show(true);
     .va;
     text-shadow: @header-text-shadow;
     .mt(-4px\0);
+    .hide;
 }
 
 .scImg-button {
     .poa;
-    .pos-tr(0,15px);
+    .pos-tl(0,12px);
 
     .close {
-        .fs(30px);
+        .fs(28px);
         .ol;
         .cl(#fff);
         .opacity(1);
@@ -79,14 +80,14 @@
         .show(true);
         .va;
         float: none;
+        .mr(10px);
 
         &:hover {
-            .transform(scale(1.2));
+            .transform(scale(1.1));
         }
 
         &.fullscreen {
-            .fs(26px);
-            .mr(10px);
+            .fs(22px);
             .hide;
         }
     }
@@ -103,10 +104,8 @@
 
 .arrow-left {
     .poa;
-    .pos-tl(50%,10px);
-    .bgc(fade(#000,30%));
+    .pos-tr(50%,50px);
     .cl(#fff);
-    .bra(50%);
     .size(40px,40px);
     .tc;
     .transform(translateY(-50%));
@@ -117,7 +116,7 @@
     text-shadow: @header-text-shadow;
 
     &:hover {
-        .bgc(fade(#000,50%));
+        .transform(translateY(-50%) scale(1.1));
     }
 
     >i {
@@ -129,7 +128,7 @@
 
 .arrow-right:extend(.arrow-left all) {
     left: auto;
-    right: 10px;
+    right: 0;
 }
 
 @media (min-width: 768px) {
@@ -161,7 +160,7 @@
     .scImg-button {
         .close {
             .fs(24px);
-            
+
             &.fullscreen {
                 .fs(20px);
             }

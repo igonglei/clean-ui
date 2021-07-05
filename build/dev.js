@@ -6,7 +6,7 @@ const logger = require('koa-logger')
 const serve = require('koa-static')
 const favicon = require('koa-favicon')
 const path = require("path")
-const opn = require('opn')
+const open = require('open')
 const build = require("./build.js")
 const port = 3000
 
@@ -25,7 +25,7 @@ app.use(favicon(resolve('static/favicon.ico')))
 build().then(() => {
   app.listen(port, () => {
     console.log(`Server listening on port ${port}`)
-    opn(`http://localhost:${port}`)
+    open(`http://localhost:${port}`)
   })
 })
 

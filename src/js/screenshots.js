@@ -22,40 +22,104 @@ var Screenshots = {
     elArrowLeft: '.arrow-left',
     elArrowRight: '.arrow-right',
     data: [{
-        title: '环境设计器',
-        cover: 'wk.enveditor.cover.png',
-        img: 'wk.enveditor.png'
+        system: 'FitIDP',
+        title: '组件设计器',
+        path:'/work/fitidp/',
+        cover: 'table.cover.png',
+        img: 'table.png'
     }, {
+        system: 'FitIDP',
+        title: '组件设计器',
+        path:'/work/fitidp/',
+        cover: 'form.cover.png',
+        img: 'form.png'
+    }, {
+        system: '人力资源电子地图',
+        title: '中国',
+        path:'/work/hrmap/',
+        cover: 'china.cover.png',
+        img: 'china.png'
+    }, {
+        system: '人力资源电子地图',
+        title: '武汉',
+        path:'/work/hrmap/',
+        cover: 'wuhan.cover.png',
+        img: 'wuhan.png'
+    }, {
+        system: '人力资源电子地图',
+        title: '产业园',
+        path:'/work/hrmap/',
+        cover: 'park.cover.png',
+        img: 'park.png'
+    }, {
+        system: 'OWL',
         title: '实验室布局',
-        cover: 'wk.lab.cover.png',
-        img: 'wk.lab.png'
+        path:'/work/owl/',
+        cover: 'uti.cover.png',
+        img: 'uti.png'
     }, {
+        system: 'OWL',
+        title: '实验室布局',
+        path:'/work/owl/',
+        cover: 'lab.cover.png',
+        img: 'lab.png'
+    }, {
+        system: 'SDE',
+        title: '看板',
+        path:'/work/sde/',
+        cover: 'home.cover.png',
+        img: 'home.png'
+    }, {
+        system: 'SDE',
+        title: '订单',
+        path:'/work/sde/',
+        cover: 'order.cover.png',
+        img: 'order.png'
+    }, {
+        system: 'SDE',
         title: '拓扑大网',
-        cover: 'wk.topo.cover.png',
-        img: 'wk.topo.png'
+        path:'/work/sde/',
+        cover: 'topo.cover.png',
+        img: 'topo.png'
     }, {
+        system: 'SDE',
+        title: '环境设计器',
+        path:'/work/sde/',
+        cover: 'enveditor.cover.png',
+        img: 'enveditor.png'
+    }, {
+        system: '斗鱼',
         title: '语音天后加冕之战',
-        cover: 'wk.douyu.voice-queen.cover.png',
-        img: 'wk.douyu.voice-queen.png'
+        path:'/work/douyu/',
+        cover: 'voice-queen.cover.png',
+        img: 'voice-queen.png'
     }, {
-        title: '斗鱼极速版激励体系',
-        cover: 'wk.douyu.invite-share.cover.png',
-        img: 'wk.douyu.invite-share.png',
+        system: '斗鱼极速版',
+        title: '激励体系',
+        path:'/work/douyu/',
+        cover: 'invite-share.cover.png',
+        img: 'invite-share.png',
         mobile: true
     }, {
-        title: '斗鱼极速版激励体系',
-        cover: 'wk.douyu.invite-rules.cover.png',
-        img: 'wk.douyu.invite-rules.png',
+        system: '斗鱼极速版',
+        title: '激励体系',
+        path:'/work/douyu/',
+        cover: 'invite-rules.cover.png',
+        img: 'invite-rules.png',
         mobile: true
     }, {
-        title: '斗鱼APP活动页',
-        cover: 'wk.douyu.activity.cover.png',
-        img: 'wk.douyu.activity.png',
+        system: '斗鱼APP',
+        title: '活动页',
+        path:'/work/douyu/',
+        cover: 'activity.cover.png',
+        img: 'activity.png',
         mobile: true
     }, {
-        title: '斗鱼PUBG弹幕应援',
-        cover: 'wk.douyu.pubg-barrage.cover.png',
-        img: 'wk.douyu.pubg-barrage.png',
+        system: '斗鱼APP',
+        title: 'PUBG弹幕应援',
+        path:'/work/douyu/',
+        cover: 'pubg-barrage.cover.png',
+        img: 'pubg-barrage.png',
         mobile: true
     }],
     init: function() {
@@ -64,8 +128,8 @@ var Screenshots = {
             $model = $(self.elModal);
         $.each(self.data, function(i, v) {
             v.index = i;
-            v.cdn = 'https://lg-npha00ki-1257320081.cos.ap-shanghai.myqcloud.com/';
-            $el.append('<div class="col-xs-12 col-sm-3"><img class="smallImg" src="{cdn}{cover}" data-mobile="{mobile}" data-src="{cdn}{img}" title="{title}" data-title="{title}" data-index="{index}"></div>'.template(v));
+            v.cdn = CLOUD + v.path;
+            $el.append('<div class="col-xs-12 col-sm-3"><img class="smallImg" src="{cdn}{cover}" data-mobile="{mobile}" data-src="{cdn}{img}" title="{system}-{title}" data-title="{system}-{title}" data-index="{index}"></div>'.template(v));
         });
         $el.on("click", "img", function() {
             self.showBigImg($(this));
